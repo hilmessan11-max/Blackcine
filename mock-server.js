@@ -7,7 +7,8 @@ const PORT_API = 8000;
 const PORT_STATIC = 8080;
 const FRONTEND_DIR = path.join(__dirname, 'Blackcine-Frontend');
 
-const TMDB_API_KEY = process.env.TMDB_API_KEY || 'YOUR_TMDB_API_KEY';
+const TMDB_API_KEY = process.env.TMDB_API_KEY || '6a45e5524eeedfaa560df831ad300a52';
+const TMDB_BEARER = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YTQ1ZTU1MjRlZWVkZmFhNTYwZGY4MzFhZDMwMGE1MiIsIm5iZiI6MTc4NzkyMzEwMS42NTUsInN1YiI6IjZhOTE4YTlkMzY4YTRmMmJjMTg0YmI5OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3bLkLydXmlaGnbJ3XfJ-Dst3SNtEUP7yahSjrwCA4sY';
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 
 const MIME_TYPES = {
@@ -617,7 +618,7 @@ function handleTmdbProxy(urlPath, queryString, res) {
   const url = `${TMDB_BASE_URL}${urlPath}${queryString ? '?' + queryString : ''}`;
 
   https.get(url, {
-    headers: { 'Authorization': `Bearer ${TMDB_API_KEY}` }
+    headers: { 'Authorization': `Bearer ${TMDB_BEARER}` }
   }, (tmdbRes) => {
     let data = '';
     tmdbRes.on('data', chunk => { data += chunk; });
