@@ -7,8 +7,8 @@ const PORT_API = 8000;
 const PORT_STATIC = 8080;
 const FRONTEND_DIR = path.join(__dirname, 'Blackcine-Frontend');
 
-const TMDB_API_KEY = process.env.TMDB_API_KEY || '6a45e5524eeedfaa560df831ad300a52';
-const TMDB_BEARER = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YTQ1ZTU1MjRlZWVkZmFhNTYwZGY4MzFhZDMwMGE1MiIsIm5iZiI6MTc4NzkyMzEwMS42NTUsInN1YiI6IjZhOTE4YTlkMzY4YTRmMmJjMTg0YmI5OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3bLkLydXmlaGnbJ3XfJ-Dst3SNtEUP7yahSjrwCA4sY';
+const TMDB_API_KEY = process.env.TMDB_API_KEY || null;
+const TMDB_BEARER = process.env.TMDB_BEARER_TOKEN || null;
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 
 const MIME_TYPES = {
@@ -615,20 +615,52 @@ function handleApiRequest(req, res) {
 }
 
 function handleTmdbProxy(urlPath, queryString, res) {
-  const url = `${TMDB_BASE_URL}${urlPath}${queryString ? '?' + queryString : ''}`;
+  if (!TMDB_BEARER && !TMDB_API_KEY) {
+    res.writeHead(503, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ success: false, message: 'TMDB non configuré côté serveur (TMDB_API_KEY/TMDB_BEARER_TOKEN manquant)' }));
+    return;
+  }
 
-  https.get(url, {
-    headers: { 'Authorization': `Bearer ${TMDB_BEARER}` }
-  }, (tmdbRes) => {
+  // Validation whitelist
+  const allowedPrefixes = ['/trending/','/movie/','/tv/','/search/','/discover/','/genre/','/configuration','/find/'];
+  const isAllowed = allowedPrefixes.some(p => urlPath.startsWith(p));
+  if (!isAllowed) {
+    res.writeHead(403, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ success: false, message: 'Endpoint TMDB non autorisé' }));
+    return;
+  }
+  if (urlPath.includes('..')) {
+    res.writeHead(400, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ success: false, message: 'Chemin invalide' }));
+    return;
+  }
+
+  let url = `${TMDB_BASE_URL}${urlPath}${queryString ? '?' + queryString : ''}`;
+  // Si on n'a que la clé v3, on l'ajoute en query
+  if (!TMDB_BEARER && TMDB_API_KEY) {
+    const sep = url.includes('?') ? '&' : '?';
+    url += `${sep}api_key=${TMDB_API_KEY}`;
+  }
+
+  const headers = {};
+  if (TMDB_BEARER) headers['Authorization'] = `Bearer ${TMDB_BEARER}`;
+
+  const req = https.get(url, { headers, timeout: 8000 }, (tmdbRes) => {
     let data = '';
     tmdbRes.on('data', chunk => { data += chunk; });
     tmdbRes.on('end', () => {
       res.writeHead(tmdbRes.statusCode, { 'Content-Type': 'application/json' });
       res.end(data);
     });
-  }).on('error', (err) => {
-    res.writeHead(500, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ error: err.message }));
+  });
+  req.on('error', (err) => {
+    res.writeHead(502, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ success: false, message: 'Erreur proxy TMDB', error: err.message }));
+  });
+  req.on('timeout', () => {
+    req.destroy();
+    res.writeHead(504, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ success: false, message: 'Timeout TMDB' }));
   });
 }
 
@@ -644,9 +676,22 @@ function handleStaticRequest(req, res) {
     return;
   }
 
-  let filePath = path.join(FRONTEND_DIR, urlPath === '/' ? 'index.html' : urlPath);
+  // Sécuriser le path — prévention traversal
+  const normalizedPath = path.normalize(urlPath === '/' ? 'index.html' : urlPath.replace(/^\/+/, ''));
+  let filePath = path.join(FRONTEND_DIR, normalizedPath);
 
-  if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
+  // Vérifier que le fichier reste dans FRONTEND_DIR
+  if (!filePath.startsWith(FRONTEND_DIR)) {
+    res.writeHead(403, { 'Content-Type': 'text/plain' });
+    res.end('Forbidden');
+    return;
+  }
+
+  try {
+    if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
+      filePath = path.join(FRONTEND_DIR, 'index.html');
+    }
+  } catch {
     filePath = path.join(FRONTEND_DIR, 'index.html');
   }
 
