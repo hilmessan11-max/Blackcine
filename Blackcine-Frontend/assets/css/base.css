@@ -1,0 +1,106 @@
+/* ============================================
+   BASE STYLES
+   Reset, body, typography, CSS variables,
+   and global section padding/margin rules.
+   ============================================ */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================================
+   UNIFORMISATION DES SECTIONS - MARGES GLOBALES
+   ============================================ */
+
+/* Variables de marges uniformes */
+:root {
+  --section-padding-y: 80px;        /* Padding vertical uniforme */
+  --section-padding-x: 20px;        /* Padding horizontal */
+  --section-max-width: 1140px;      /* Largeur max du contenu */
+  --section-title-mb: 50px;         /* Marge sous les titres de section */
+}
+
+/* Style de base pour toutes les sections principales */
+.articles-section,
+.trailers-section,
+.top-films-section,
+.ticket-section,
+.latest-movie-section,
+.arte-section,
+.opportunities-section,
+.classics-section,
+.partners-section,
+.prospace-section {
+  padding: var(--section-padding-y) var(--section-padding-x);
+  max-width: var(--section-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Pour les sections full-width avec container interne */
+.trailers-section,
+.arte-section,
+.classics-section {
+  max-width: 100%;
+  padding: var(--section-padding-y) 0;
+}
+
+.trailers-section .container.narrow,
+.arte-section .container-fluid,
+.classics-section .container-fluid,
+.arte-section .container.narrow,
+.classics-section .container.narrow {
+  max-width: var(--section-max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+/* Rating stars shared */
+.rating i {
+  color: #ffc338;
+  font-size: 1rem;
+  margin-right: 2px;
+}
+
+/* Breadcrumb separator */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  color: rgba(255,255,255,0.4);
+  margin: 0 0.5rem;
+}
+
+/* Page content offset from fixed header */
+.page-content { margin-top: 80px; }
+
+/* Focus-visible for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #E50914;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.nav-link:focus-visible,
+.footer-link:focus-visible,
+.mobile-nav-link:focus-visible {
+  outline: 2px solid #E50914;
+  outline-offset: 2px;
+  text-decoration: underline;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #E50914;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(229, 9, 20, 0.25);
+}
+
+.card:focus-visible {
+  outline: 2px solid #E50914;
+  outline-offset: 2px;
+}
+
+/* Remove default outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}

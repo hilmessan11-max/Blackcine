@@ -1,0 +1,333 @@
+﻿/* ============================================
+   TOP FILMS CARDS
+   ============================================ */
+
+/* === FILTRES === */
+.top-filters-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.top-filter-btn {
+  background: white;
+  border: 1px solid #e8e8e8;
+  color: #888888;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-filter-btn i {
+  font-size: 0.8rem;
+}
+
+.top-filter-btn:hover {
+  border-color: #E50914;
+  color: #E50914;
+  transform: translateY(-2px);
+}
+
+.top-filter-btn.active {
+  background: #E50914;
+  border-color: #E50914;
+  color: white;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.25);
+}
+
+/* === CARTE FILM === */
+.top-movie-card {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.top-movie-card:hover {
+  transform: translateY(-10px);
+}
+
+/* === POSTER === */
+.top-poster {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.top-movie-card:hover .top-poster {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.top-poster img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.3s ease;
+  display: block;
+}
+
+.top-movie-card:hover .top-poster img {
+  transform: scale(1.1);
+  filter: brightness(0.6);
+}
+
+/* === OVERLAY === */
+.top-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  gap: 15px;
+}
+
+.top-movie-card:hover .top-overlay {
+  opacity: 1;
+}
+
+.btn-play-top {
+  width: 55px;
+  height: 55px;
+  background: #E50914;
+  border: 3px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: scale(0.6);
+  transition: transform 0.3s ease;
+  padding-left: 4px;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.6);
+}
+
+.top-movie-card:hover .btn-play-top {
+  transform: scale(1);
+}
+
+.top-quick-actions {
+  display: flex;
+  gap: 10px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.3s ease 0.1s;
+}
+
+.top-movie-card:hover .top-quick-actions {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.btn-quick-action {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: white;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-quick-action:hover {
+  background: white;
+  color: #E50914;
+  transform: scale(1.1);
+}
+
+/* === BADGES === */
+.top-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.badge-new {
+  background: linear-gradient(135deg, #E50914 0%, #FF2D38 100%);
+}
+
+.badge-trending {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+}
+
+.badge-coming {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.top-rank {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.series-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 1;
+  letter-spacing: 0.5px;
+}
+
+/* === INFO FILM === */
+.top-info {
+  padding: 12px 0 0;
+}
+
+.top-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.top-movie-card:hover .top-title {
+  color: #E50914;
+}
+
+.top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.top-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #ffc338;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.top-rating i {
+  font-size: 0.8rem;
+}
+
+.top-rating span {
+  color: #000;
+}
+
+.top-year {
+  color: #999;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.top-genres {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.genre-tag {
+  background: #f5f5f5;
+  color: #888888;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s ease;
+}
+
+.top-movie-card:hover .genre-tag {
+  background: #fff5f5;
+  border-color: #ffd0d0;
+  color: #E50914;
+}
+
+/* === BOUTON VOIR CLASSEMENT === */
+.btn-see-ranking {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: #000;
+  border: 1px solid #E50914;
+  padding: 12px 32px;
+  border-radius: 25px;
+  text-decoration: none;
+  
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-see-ranking:hover {
+  background: #E50914;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 9, 20, 0.3);
+}
+
+.btn-see-ranking i {
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.btn-see-ranking:hover i {
+  transform: translateX(5px);
+}

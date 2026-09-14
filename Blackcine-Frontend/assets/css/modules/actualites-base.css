@@ -1,0 +1,10 @@
+﻿header {
+    background-color: #000000;
+    height: 100px;
+}
+
+body header.scrolled {
+    background-color: #000 !important;
+}
+
+/* === SECTION PRINCIPALE === */

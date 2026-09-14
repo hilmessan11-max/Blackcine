@@ -1,0 +1,58 @@
+﻿/* === NAVIGATION CATÉGORIES === */
+.category-navigation {
+  background: white;
+  padding: 0;
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 100px;
+  z-index: 100;
+}
+
+.category-navigation .container {
+  max-width: var(--section-max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+.category-tabs {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  padding: 15px 0;
+  scrollbar-width: none;
+}
+
+.category-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.category-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.category-tab:hover {
+  background: #f3f4f6;
+  color: var(--text-dark);
+}
+
+.category-tab.active {
+  background: var(--text-dark);
+  color: white;
+}
+
+.category-tab i {
+  font-size: 1.1rem;
+}
+

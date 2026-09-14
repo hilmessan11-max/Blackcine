@@ -1,0 +1,83 @@
+﻿/* === RESPONSIVE === */
+@media (min-width: 1200px) {
+    .col-article {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .col-article {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-article {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .featured-title {
+        font-size: 1.3rem;
+    }
+    
+    .featured-image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .actualites-section {
+        padding-top: 20px;
+        margin-top: 100px;
+    }
+    
+    .col-article {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .featured-image {
+        height: 300px;
+    }
+    
+    .featured-title {
+        font-size: 1.1rem;
+    }
+    
+    .featured-excerpt {
+        display: none;
+    }
+    
+    .featured-meta {
+        font-size: 0.7rem;
+        gap: 10px;
+    }
+    
+    .btn-read-more {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-article {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .featured-image {
+        height: 250px;
+    }
+    
+    .featured-overlay {
+        padding: 20px;
+    }
+    
+    .popular-item img {
+        width: 50px;
+        height: 50px;
+    }
+}

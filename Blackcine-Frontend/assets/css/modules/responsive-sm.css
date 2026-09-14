@@ -1,0 +1,560 @@
+﻿/* ============================================
+   576px BREAKPOINT
+   ============================================ */
+
+@media (max-width: 576px) {
+  /* --- Mobile Menu Content --- */
+  .mobile-menu-content {
+    padding: 20px 15px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+
+  /* --- Hero --- */
+  .hero-container {
+    padding: 180px 10px 0 !important;
+    gap: 20px;
+  }
+  
+  .hero-right img {
+    width: 280px !important;
+  }
+  
+  .hero-title {
+    font-size: 1.3rem;
+  }
+  
+  .hero-title span {
+    font-size: 1rem;
+  }
+  
+  .hero-actions {
+    gap: 8px;
+  }
+  
+  .hero-actions span {
+    font-size: 0.75rem;
+  }
+  
+  .btn-circle {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .movie-info {
+    font-size: 0.75rem;
+  }
+  
+  .btn-detail {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+
+  /* --- Trailers --- */
+  .play-btn-large {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .featured-badge {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  .views-badge {
+    font-size: 0.7rem;
+  }
+
+  .carousel-item-card {
+    min-width: 180px;
+  }
+
+  .carousel-details {
+    padding: 12px;
+  }
+
+  /* --- Top Films --- */
+  .top-poster img {
+    height: 240px;
+  }
+
+  .btn-play-top {
+    width: 45px;
+    height: 45px;
+    font-size: 0.95rem;
+  }
+
+  .btn-quick-action {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+
+  .top-badge {
+    top: 8px;
+    right: 8px;
+    font-size: 0.6rem;
+    padding: 4px 10px;
+  }
+
+  .top-rank {
+    top: 8px;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .series-badge {
+    bottom: 8px;
+    left: 8px;
+    font-size: 0.6rem;
+    padding: 3px 8px;
+  }
+
+  .top-title {
+    font-size: 0.8rem;
+  }
+
+  .top-meta {
+    margin-bottom: 6px;
+  }
+
+  /* --- Tickets --- */
+  .ticket-poster-section {
+    height: 240px;
+  }
+
+  .ticket-details-section {
+    padding: 15px;
+  }
+
+  .ticket-movie-title {
+    font-size: 1.1rem;
+  }
+
+  .ticket-rating i {
+    font-size: 0.8rem;
+  }
+
+  .rating-value {
+    font-size: 0.75rem;
+  }
+
+  .ticket-description {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 3;
+  }
+
+  .ticket-info-grid {
+    gap: 8px;
+  }
+
+  .ticket-availability {
+    top: 10px;
+    left: 10px;
+    font-size: 0.65rem;
+    padding: 4px 10px;
+  }
+
+  .btn-ticket-play {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .indicator {
+    width: 8px;
+    height: 8px;
+  }
+
+  .indicator.active {
+    width: 24px;
+  }
+
+  /* --- Selection --- */
+  .selection-poster img {
+    height: 200px;
+  }
+
+  .btn-play-poster {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .badge-new {
+    top: 8px;
+    right: 8px;
+    font-size: 0.55rem;
+    padding: 3px 7px;
+  }
+
+  .rating-badge {
+    bottom: 8px;
+    left: 8px;
+    font-size: 0.65rem;
+    padding: 3px 7px;
+  }
+
+  .selection-title {
+    font-size: 0.75rem;
+    -webkit-line-clamp: 1;
+  }
+
+  .selection-year {
+    font-size: 0.65rem;
+  }
+
+  /* --- Festivals --- */
+  .festival-image-wrapper {
+    min-height: 250px;
+  }
+
+  .festival-content {
+    padding: 20px;
+  }
+
+  .festival-title {
+    font-size: 1.4rem;
+  }
+
+  .festival-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .festival-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .btn-play-festival {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .festival-badge-live {
+    top: 12px;
+    left: 12px;
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+
+  .winner-poster img {
+    height: 200px;
+  }
+
+  .btn-play-winner {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .winner-badge {
+    top: 8px;
+    left: 8px;
+    font-size: 0.6rem;
+    padding: 4px 10px;
+  }
+
+  .winner-title {
+    font-size: 0.85rem;
+  }
+
+  .winner-director {
+    font-size: 0.7rem;
+  }
+
+  .news-image {
+    height: 140px;
+  }
+
+  .news-date-badge {
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.65rem;
+    padding: 4px 10px;
+  }
+
+  .news-content {
+    padding: 14px;
+  }
+
+  .news-title {
+    font-size: 0.9rem;
+  }
+
+  .news-excerpt {
+    font-size: 0.8rem;
+  }
+
+  /* --- Heritage --- */
+  .classic-poster img {
+    height: 220px;
+  }
+
+  .btn-play-classic {
+    width: 45px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .classic-year {
+    top: 8px;
+    right: 8px;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  .classic-award-badge {
+    bottom: 8px;
+    left: 8px;
+    font-size: 0.6rem;
+    padding: 4px 10px;
+  }
+
+  .classic-title {
+    font-size: 0.9rem;
+  }
+
+  .classic-director {
+    font-size: 0.75rem;
+  }
+
+  .director-photo-wrapper {
+    min-height: 140px;
+  }
+
+  .director-content {
+    padding: 14px;
+  }
+
+  .director-name {
+    font-size: 1rem;
+  }
+
+  .director-title-role {
+    font-size: 0.8rem;
+  }
+
+  .director-bio {
+    font-size: 0.8rem;
+  }
+
+  /* --- Partners --- */
+  .partners-grid {
+    gap: 15px;
+    margin-bottom: 35px;
+  }
+
+  .partner-logo-wrapper {
+    height: 90px;
+    padding: 14px 10px;
+  }
+
+  .partner-logo {
+    max-height: 45px;
+  }
+
+  .partner-name {
+    font-size: 0.8rem;
+  }
+
+  .partner-role {
+    font-size: 0.62rem;
+  }
+
+  .partnership-stats {
+    gap: 12px;
+    padding: 20px 16px;
+    margin-bottom: 35px;
+  }
+
+  .stat-box {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .stat-icon i {
+    font-size: 0.95rem;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.66rem;
+  }
+
+  .btn-all-partners {
+    font-size: 0.82rem;
+    padding: 10px 26px;
+  }
+
+  /* --- Opportunities --- */
+  .opportunity-image img {
+    height: 130px;
+  }
+
+  .opportunity-card .p-4 {
+    padding: 0.8rem !important;
+  }
+
+  .opportunity-card h5 {
+    font-size: 0.95rem;
+  }
+
+  .opportunity-card p {
+    font-size: 0.75rem;
+  }
+
+  /* --- Articles --- */
+  .article-img-container {
+    height: 140px;
+  }
+
+  .article-card-content {
+    padding: 12px;
+  }
+
+  .article-title {
+    font-size: 0.9rem;
+  }
+
+  .article-text {
+    font-size: 0.75rem;
+  }
+
+  .article-date {
+    font-size: 0.7rem;
+  }
+
+  .btn-read {
+    font-size: 0.8rem;
+  }
+
+  /* --- Global --- */
+  :root {
+    --section-padding-y: 40px;
+    --section-padding-x: 10px;
+  }
+  
+  .header-top {
+    padding: 0 10px;
+  }
+  
+  .logo img {
+    width: 90px;
+  }
+  
+  .btn-register {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+  }
+  
+  .btn-lang {
+    font-size: 0.75rem;
+  }
+  
+  .auth-buttons {
+    gap: 8px;
+  }
+  
+  .search-bar {
+    padding: 5px 10px;
+  }
+  
+  .search-container select {
+    width: 70px;
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+  
+  .search-container input {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+  
+  .search-container button {
+    padding: 0 10px;
+    font-size: 0.9rem;
+  }
+  
+  .articles-section .text-center h3,
+  .trailers-section h3,
+  .top-films-section h3,
+  .ticket-section h2,
+  .latest-movie-section h3,
+  .opportunities-section h3,
+  .heritage-section h3,
+  .partners-section h3,
+  .prospace-section h3 {
+    font-size: 1.3rem;
+  }
+  
+  .articles-section .text-dark {
+    font-size: 0.85rem;
+  }
+  
+  .footer .row {
+    text-align: center;
+  }
+  
+  .footer .col-6,
+  .footer .col-md-2 {
+    margin-bottom: 2rem;
+  }
+  
+  .footer h6 {
+    font-size: 0.9rem;
+  }
+  
+  .footer ul li a {
+    font-size: 0.8rem;
+  }
+  
+  .newsletter-section input.form-control {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-section form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter-section .btn {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  /* --- Buttons Global --- */
+  .btn-outline-dark {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+
+  /* --- Prospace --- */
+  .prospace-image img {
+    height: 180px;
+  }
+  
+  .prospace-content h4 {
+    font-size: 1.1rem;
+  }
+  
+  .prospace-content p {
+    font-size: 0.85rem;
+  }
+}

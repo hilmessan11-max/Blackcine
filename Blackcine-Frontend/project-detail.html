@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackCiné - Détail du Projet</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+<!-- SEO Meta Tags -->
+<meta name="description" content="Détail du projet - BlackCiné">
+<meta name="keywords" content="cinéma africain, films, séries, actualités, BlackCiné">
+<meta name="author" content="BlackCiné">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blackcine.com/project-detail.html">
+<meta property="og:title" content="Projet - BlackCiné">
+<meta property="og:description" content="Détail du projet - BlackCiné">
+<meta property="og:image" content="/assets/images/og-default.jpg">
+<meta property="og:site_name" content="BlackCiné">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Projet - BlackCiné">
+<meta name="twitter:description" content="Détail du projet - BlackCiné">
+<meta name="twitter:image" content="/assets/images/og-default.jpg">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="assets/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .project-detail-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      min-height: 400px;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-detail-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('') center/cover;
+      filter: blur(20px);
+      opacity: 0.3;
+      z-index: 0;
+    }
+    .project-hero-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      padding: 80px 0 40px;
+    }
+    .project-thumbnail {
+      flex-shrink: 0;
+      width: 300px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .project-thumbnail img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .project-info {
+      color: #fff;
+      flex: 1;
+    }
+    .project-info h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .project-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+    .project-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .project-description {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      opacity: 0.9;
+      margin: 20px 0;
+    }
+    .project-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+    }
+    .btn-project {
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn-project-primary {
+      background: #E50914;
+      color: #fff;
+      border: none;
+    }
+    .btn-project-primary:hover { background: #C5070F; color: #fff; }
+    .btn-project-secondary {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+    .btn-project-secondary:hover { border-color: #fff; color: #fff; }
+
+    .project-section {
+      padding: 60px 0;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 24px;
+      background: #E50914;
+      border-radius: 2px;
+    }
+    .project-details-card .detail-item {
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .project-details-card .detail-item:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: 768px) {
+      .project-hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 0 40px;
+      }
+      .project-thumbnail { width: 200px; }
+      .project-info h1 { font-size: 1.8rem; }
+      .project-meta { justify-content: center; }
+      .project-actions { justify-content: center; }
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/design-system.css">
+<link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+<body>
+<!-- Skip Navigation -->
+<a href="#main-content" class="sr-only sr-only-focusable">Aller au contenu principal</a>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <a href="index.html" class="logo"><img src="assets/images/log3.png" alt="BlackCiné - Logo" width="120"></a>
+    <nav class="nav-menu" aria-label="Menu principal">
+      <div class="nav-item dropdown">
+        <a href="films.html" class="nav-link" aria-expanded="false" data-key="menu_films">FILMS <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="films.html">Tous les films</a>
+        </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a href="series.html" class="nav-link" aria-expanded="false" data-key="menu_series">SÉRIES <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="series.html">Toutes les séries</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="emissions.html" class="nav-link" data-key="menu_emissions">ÉMISSIONS</a>
+      </div>
+      <div class="nav-item">
+        <a href="actualites.html" class="nav-link" data-key="menu_actualites">ACTUALITÉS</a>
+      </div>
+      <div class="nav-item">
+        <a href="communaute.html" class="nav-link" data-key="menu_communaute">COMMUNAUTÉ</a>
+      </div>
+    
+
+      <div class="nav-item">
+        <a href="selections.html" class="nav-link" data-key="menu_selections">SÉLECTIONS</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="festivals.html" class="nav-link" data-key="menu_festivals">FESTIVALS</a>
+      </div>
+    </nav>
+      <!-- Bouton menu mobile -->
+      <button class="mobile-menu-toggle d-md-none btn btn-ghost btn-circle text-white" id="mobileMenuToggle" aria-label="Ouvrir le menu mobile">
+        <i class="fas fa-bars text-lg"></i>
+      </button>
+    <div class="auth-buttons">
+      <button class="btn btn-ghost btn-sm text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200" id="lang-toggle" data-key="btn_lang">Français<i class="fa-solid fa-chevron-down"></i></button>
+      <a href="#" class="btn btn-primary btn-sm rounded-full px-5 py-2 text-white font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all duration-200" data-bs-toggle="modal" data-bs-target="#signupModal" data-key="btn_register">S'INSCRIRE</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-content">
+    <div class="mobile-nav-item">
+      <a href="films.html" class="mobile-nav-link" data-key="menu_films">FILMS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="series.html" class="mobile-nav-link" data-key="menu_series">SÉRIES</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="emissions.html" class="mobile-nav-link" data-key="menu_emissions">ÉMISSIONS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="actualites.html" class="mobile-nav-link" data-key="menu_actualites">ACTUALITÉS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="communaute.html" class="mobile-nav-link" data-key="menu_communaute">COMMUNAUTÉ</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="selections.html" class="mobile-nav-link" data-key="menu_selections">SÉLECTIONS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="festivals.html" class="mobile-nav-link" data-key="menu_festivals">FESTIVALS</a>
+    </div>
+  </div>
+</div>
+
+<main id="main-content" class="flex-1">
+<!-- Breadcrumb -->
+<nav aria-label="Fil d'Ariane" class="container" style="margin-top: 80px; padding-bottom: 0;">
+  <ol class="breadcrumb flex items-center gap-2 text-sm" style="list-style: none; display: flex; padding: 0; margin: 0;">
+    <li class="breadcrumb-item"><a href="index.html" class="text-white/60 hover:text-primary transition-colors" data-key="nav_home">Accueil</a></li>
+    <li class="breadcrumb-item"><a href="communaute.html" class="text-white/60 hover:text-primary transition-colors">Communauté</a></li>
+    <li class="breadcrumb-item active text-white" aria-current="page" style="color: #fff;">Projet</li>
+  </ol>
+</nav>
+<!-- LOADING STATE -->
+<div id="loadingState" class="text-center py-5" style="margin-top: 80px;">
+  <div class="spinner-border text-danger" role="status">
+    <span class="visually-hidden">Chargement...</span>
+  </div>
+  <p class="mt-3 text-muted">Chargement du projet...</p>
+</div>
+
+<!-- PROJECT DETAIL (hidden until loaded) -->
+<div id="projectDetail" style="display: none;">
+
+  <!-- HERO SECTION -->
+  <section class="project-detail-hero">
+    <div class="container">
+      <div class="project-hero-content">
+        <div class="project-thumbnail">
+          <img id="projectThumbnail" src="assets/images/ceb1.jpg" alt="Project Thumbnail" loading="lazy" decoding="async">
+        </div>
+        <div class="project-info">
+          <h1 id="projectTitle" class="text-2xl font-bold text-white mb-4" data-animate="fade-up">Titre du Projet</h1>
+          
+          <div class="project-meta">
+            <span id="projectStatus" class="text-white/60 text-sm"><i class="fas fa-circle text-white/40 text-xs uppercase tracking-wider"></i> <span class="text-white font-medium">Statut</span></span>
+            <span id="projectCity" class="text-white/60 text-sm"><i class="fas fa-map-marker-alt text-white/40 text-xs uppercase tracking-wider"></i> <span class="text-white font-medium">Ville</span></span>
+            <span id="projectCountry" class="text-white/60 text-sm"><i class="fas fa-globe-africa text-white/40 text-xs uppercase tracking-wider"></i> <span class="text-white font-medium">Pays</span></span>
+            <span id="projectTeamSize" class="text-white/60 text-sm"><i class="fas fa-users text-white/40 text-xs uppercase tracking-wider"></i> <span class="text-white font-medium">Taille équipe</span></span>
+          </div>
+
+          <div class="project-status" id="projectStatusLabel">
+            <i class="fas fa-circle"></i>
+            <span>N/A</span>
+          </div>
+
+          <p class="project-description text-white/70 leading-relaxed" id="projectDescription">
+            Description du projet...
+          </p>
+
+          <div class="project-actions">
+            <button id="btnApply" class="btn btn-primary btn-sm rounded-full px-5 py-2">
+              <i class="fas fa-handshake"></i> Rejoindre le projet
+            </button>
+            <button id="btnFavorite" class="btn btn-ghost btn-sm rounded-full text-white/60 hover:text-white hover:bg-white/10" data-action="toggle-favorite">
+              <i class="far fa-heart"></i> Favoris
+            </button>
+            <button class="btn btn-ghost btn-sm rounded-full text-white/60 hover:text-white hover:bg-white/10" data-action="share" data-share-title="" data-share-url="">
+              <i class="fas fa-share-alt"></i> Partager
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS SECTION -->
+  <section class="project-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="section-title text-xl font-bold text-white mb-4 flex items-center gap-2" data-animate="fade-up">
+            <h2>Description</h2>
+          </div>
+          <p class="project-description text-white/70 leading-relaxed" id="projectFullDescription">
+            Description complète du projet...
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="card bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300 project-details-card" data-animate="fade-up" data-stagger="80" data-parent-index="0">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3 text-white">Détails du projet</h5>
+              <div class="detail-item">
+                <span class="text-white/40 text-xs uppercase tracking-wider">Statut :</span>
+                <span id="projectStatusDetail" class="text-white font-medium"></span>
+              </div>
+              <div class="detail-item">
+                <span class="text-white/40 text-xs uppercase tracking-wider">Localisation :</span>
+                <span id="projectLocationDetail" class="text-white font-medium"></span>
+              </div>
+              <div class="detail-item">
+                <span class="text-white/40 text-xs uppercase tracking-wider">Taille de l'équipe :</span>
+                <span id="projectTeamSizeDetail" class="text-white font-medium"></span>
+              </div>
+              <div class="detail-item">
+                <span class="text-white/40 text-xs uppercase tracking-wider">Budget :</span>
+                <span id="projectBudgetDetail" class="text-white font-medium"></span>
+              </div>
+              <button class="btn btn-primary btn-sm rounded-full px-5 py-2 w-100 mt-3" id="btnApplySidebar">
+                <i class="fas fa-handshake"></i> Rejoindre le projet
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+
+</main>
+<footer class="footer text-light pt-5 pb-4" style="background-color: #000;">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-start mb-4">
+      <div class="partenaires-section">
+        <h5 class="fw-bold mb-3" data-key="footer_partenaires">Partenaires</h5>
+        <div class="d-flex flex-wrap align-items-center gap-4" id="footerPartners"></div>
+        <div class="footer-stats mt-3 text-secondary small" id="footerStats"></div>
+      </div>
+      <div class="newsletter-section text-end">
+        <h5 class="fw-bold mb-3" data-key="footer_newsletter">Newsletter</h5>
+        <form class="d-flex" role="form">
+          <input type="email" class="form-control me-2 bg-dark text-light border-secondary" placeholder="Votre email">
+          <button class="btn btn-danger px-3" data-key="footer_sabonner">S'abonner</button>
+        </form>
+      </div>
+    </div>
+    <hr class="border-secondary opacity-50">
+    <div class="row text-secondary">
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">À propos</h6>
+        <ul class="list-unstyled small">
+          <li><a href="about.html" class="footer-link">Qui sommes-nous</a></li>
+          <li><a href="partenaires.html" class="footer-link">Partenaires</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="faq.html" class="footer-link">FAQ</a></li>
+          <li><a href="selections.html" class="footer-link">Sélections</a></li>
+          <li><a href="festivals.html" class="footer-link">Festivals</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Films</h6>
+        <ul class="list-unstyled small">
+          <li><a href="films.html" class="footer-link">Nouveautés</a></li>
+          <li><a href="films.html" class="footer-link">À l'Affiche</a></li>
+          <li><a href="films.html" class="footer-link">À venir</a></li>
+          <li><a href="films.html" class="footer-link">Par pays</a></li>
+          <li><a href="films.html" class="footer-link">Par langue</a></li>
+          <li><a href="films.html" class="footer-link">Box-office</a></li>
+          <li><a href="films.html" class="footer-link">Tous les films</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Séries</h6>
+        <ul class="list-unstyled small">
+          <li><a href="series.html" class="footer-link">Nouveautés</a></li>
+          <li><a href="series.html" class="footer-link">En cours</a></li>
+          <li><a href="series.html" class="footer-link">À venir</a></li>
+          <li><a href="series.html" class="footer-link">Par pays</a></li>
+          <li><a href="series.html" class="footer-link">Par genre</a></li>
+          <li><a href="series.html" class="footer-link">Toutes les séries</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Émissions</h6>
+        <ul class="list-unstyled small">
+          <li><a href="emissions.html" class="footer-link">Interviews</a></li>
+          <li><a href="emissions.html" class="footer-link">Talk-shows</a></li>
+          <li><a href="emissions.html" class="footer-link">Podcasts</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Communauté</h6>
+        <ul class="list-unstyled small">
+          <li><a href="communaute.html" class="footer-link">Casting</a></li>
+          <li><a href="communaute.html" class="footer-link">Projets</a></li>
+          <li><a href="communaute.html" class="footer-link">Concours</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary opacity-50 mt-4">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-secondary small">
+      <p class="mb-2 mb-md-0">© 2026 BlackCiné. Tous droits réservés.</p>
+      <div class="d-flex flex-wrap justify-content-center">
+        <a href="confidentialite.html" class="footer-link me-2">Confidentialité</a> |
+        <a href="mentions-legales.html" class="footer-link mx-2">Mentions légales</a> |
+        <a href="cgu.html" class="footer-link mx-2">CGU</a> |
+        <a href="cgv.html" class="footer-link mx-2">CGV</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/sanitize.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/project-detail.js"></script>
+<script src="assets/js/footer.js"></script>
+<script src="assets/js/favorites.js"></script>
+<script src="assets/js/sharing.js"></script>
+<script src="assets/js/modern-ui.js"></script>
+<script src="assets/js/page-transitions.js"></script>
+<script src="assets/js/form-animations.js"></script>
+<script src="assets/js/accessibility.js"></script>
+<script src="assets/js/mobile-interactions.js"></script>
+<script src="assets/js/performance.js"></script>
+<script src="assets/js/skeletons.js"></script>
+
+</body>
+</html>

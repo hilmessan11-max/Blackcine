@@ -1,0 +1,23 @@
+{
+  "name": "blackcine-frontend",
+  "version": "1.0.0",
+  "description": "BlackCiné — Plateforme de cinéma africain",
+  "scripts": {
+    "dev": "concurrently \"tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css --watch\" \"npx serve . -l 8080\"",
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css --minify",
+    "optimize": "npm run build && bash optimize.sh",
+    "minify:css": "npx csso assets/css/*.css --output dist/css/",
+    "minify:js": "npx terser assets/js/*.js --output dist/js/",
+    "lint": "npx prettier --check 'assets/js/*.js'",
+    "format": "npx prettier --write 'assets/js/*.js'",
+    "serve": "npx serve ."
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "daisyui": "^4.12.0",
+    "concurrently": "^8.2.0",
+    "csso-cli": "^4.0.1",
+    "terser": "^5.31.0",
+    "prettier": "^3.2.0"
+  }
+}

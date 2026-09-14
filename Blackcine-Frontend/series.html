@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackCiné - Séries</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+<!-- SEO Meta Tags -->
+<meta name="description" content="Séries africaines - Découvrez les meilleures séries">
+<meta name="keywords" content="cinéma africain, films, séries, actualités, BlackCiné">
+<meta name="author" content="BlackCiné">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blackcine.com/series.html">
+<meta property="og:title" content="Séries - BlackCiné">
+<meta property="og:description" content="Séries africaines - Découvrez les meilleures séries">
+<meta property="og:image" content="/assets/images/og-default.jpg">
+<meta property="og:site_name" content="BlackCiné">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Séries - BlackCiné">
+<meta name="twitter:description" content="Séries africaines - Découvrez les meilleures séries">
+<meta name="twitter:image" content="/assets/images/og-default.jpg">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="assets/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/serie.css">
+  <link rel="stylesheet" href="assets/css/design-system.css">
+<link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+<body>
+<!-- Skip Navigation -->
+<a href="#main-content" class="sr-only sr-only-focusable">Aller au contenu principal</a>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <a href="index.html" class="logo"><img src="assets/images/log3.png" alt="BlackCiné - Logo" width="120"></a>
+
+    <nav class="nav-menu" aria-label="Menu principal">
+      <div class="nav-item dropdown">
+        <a href="films.html" class="nav-link" aria-expanded="false" data-key="menu_films">FILMS <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="menu_films_nouveautes">Nouveautés</a>
+          <a href="#" data-key="menu_films_affiche">À l'Affiche</a>
+          <a href="#" data-key="menu_films_avvenir">À venir</a>
+          <a href="#" data-key="menu_films_pays">Par pays</a>
+          <a href="#" data-key="menu_films_langue">Par langue</a>
+          <a href="#" data-key="menu_films_boxoffice">Box-office</a>
+          <a href="#" data-key="menu_films_courts">Courts-métrages & Webfilms</a>
+          <a href="#" data-key="menu_films_classiques">Classiques africains</a>
+          <a href="#" data-key="menu_films_tous">Tous les films</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="series.html" class="nav-link active" aria-expanded="false" data-key="menu_series">SÉRIES <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="menu_series_nouveautes">Nouveautés</a>
+          <a href="#" data-key="menu_series_en_cours">En cours</a>
+          <a href="#" data-key="menu_series_avvenir">À venir</a>
+          <a href="#" data-key="menu_series_pays">Par pays</a>
+          <a href="#" data-key="menu_series_genre">Par genre</a>
+          <a href="#" data-key="menu_series_webmini">Webséries & Mini-séries</a>
+          <a href="#" data-key="menu_series_cultes">Séries cultes africaines</a>
+          <a href="#" data-key="menu_series_toutes">Toutes les séries</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="emissions.html" class="nav-link" aria-expanded="false" data-key="menu_emissions">ÉMISSIONS <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="menu_emissions_interviews">Interviews</a>
+          <a href="#" data-key="menu_emissions_talkshows">Talk-shows</a>
+          <a href="#" data-key="menu_emissions_chroniques">Chroniques</a>
+          <a href="#" data-key="menu_emissions_makingof">Making-of</a>
+          <a href="#" data-key="menu_emissions_podcasts">Podcasts</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="actualites.html" class="nav-link" aria-expanded="false" data-key="menu_actualites">ACTUALITÉS <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="menu_actualites_news">News</a>
+          <a href="#" data-key="menu_actualites_interviews">Interviews</a>
+          <a href="#" data-key="menu_actualites_critiques">Critiques</a>
+          <a href="#" data-key="menu_actualites_festivals">Festivals & événements</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="communaute.html" class="nav-link" aria-expanded="false" data-key="menu_communaute">COMMUNAUTÉ <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="menu_communaute_casting">Casting</a>
+          <a href="#" data-key="menu_communaute_projets">Projets</a>
+          <a href="#" data-key="menu_communaute_concours">Concours</a>
+          <a href="#" data-key="menu_communaute_rejoindre">Rejoindre la Communauté</a>
+        </div>
+      </div>
+    
+
+      <div class="nav-item">
+        <a href="selections.html" class="nav-link" data-key="menu_selections">SÉLECTIONS</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="festivals.html" class="nav-link" data-key="menu_festivals">FESTIVALS</a>
+      </div>
+    </nav>
+
+      <!-- Bouton menu mobile -->
+      <button class="mobile-menu-toggle d-md-none btn btn-ghost btn-circle text-white" id="mobileMenuToggle" aria-label="Ouvrir le menu mobile">
+        <i class="fas fa-bars text-lg"></i>
+      </button>
+
+    <div class="auth-buttons">
+      <button class="btn btn-ghost btn-sm text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200" id="lang-toggle" data-key="btn_lang">
+        Français<i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <a href="#" class="btn btn-primary btn-sm rounded-full px-5 py-2 text-white font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all duration-200" data-bs-toggle="modal" data-bs-target="#signupModal" data-key="btn_register">S'INSCRIRE</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-content">
+    <div class="mobile-nav-item">
+      <a href="films.html" class="mobile-nav-link" data-key="menu_films">FILMS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="series.html" class="mobile-nav-link" data-key="menu_series">SÉRIES</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="emissions.html" class="mobile-nav-link" data-key="menu_emissions">ÉMISSIONS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="actualites.html" class="mobile-nav-link" data-key="menu_actualites">ACTUALITÉS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="communaute.html" class="mobile-nav-link" data-key="menu_communaute">COMMUNAUTÉ</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="selections.html" class="mobile-nav-link" data-key="menu_selections">SÉLECTIONS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="festivals.html" class="mobile-nav-link" data-key="menu_festivals">FESTIVALS</a>
+    </div>
+  </div>
+</div>
+
+<main id="main-content" class="flex-1">
+<!-- SECTION SÉRIES -->
+<section class="movies-section">
+  <div class="container">
+    <div class="row">
+      
+      <!-- COLONNE GAUCHE : SIDEBAR -->
+      <div class="col-lg-3 col-md-4 mb-4">
+        <div class="sidebar bg-white text-dark p-4 rounded-4">
+          
+          <!-- GENRES -->
+          <h5 class="fw-bold mb-3 text-uppercase">Genre</h5>
+          <ul class="list-unstyled genres-list mb-4">
+            <li><a href="#" data-genre="action">Action</a></li>
+            <li><a href="#" data-genre="comedy">Comédie</a></li>
+            <li><a href="#" data-genre="drama">Drame</a></li>
+            <li><a href="#" data-genre="thriller">Thriller</a></li>
+            <li><a href="#" data-genre="romance">Romance</a></li>
+            <li><a href="#" data-genre="crime">Crime</a></li>
+            <li><a href="#" data-genre="mystery">Mystère</a></li>
+            <li><a href="#" data-genre="family">Familial</a></li>
+            <li><a href="#" data-genre="documentary">Documentaire</a></li>
+            <li><a href="#" data-genre="horror">Horreur</a></li>
+            <li><a href="#" data-genre="adventure">Aventure</a></li>
+            <li><a href="#" data-genre="fantasy">Fantastique</a></li>
+          </ul>
+
+          <!-- STATUT -->
+          <h5 class="fw-bold mb-3 text-uppercase">Statut</h5>
+          <ul class="list-unstyled genres-list mb-4">
+            <li><a href="#" data-status="ongoing">En cours</a></li>
+            <li><a href="#" data-status="completed">Terminée</a></li>
+            <li><a href="#" data-status="upcoming">À venir</a></li>
+            <li><a href="#" data-status="cancelled">Annulée</a></li>
+          </ul>
+
+          <!-- NOMBRE DE SAISONS -->
+          <h5 class="fw-bold mb-3 text-uppercase">Saisons</h5>
+          <ul class="list-unstyled genres-list mb-4">
+            <li><a href="#" data-seasons="1">1 Saison</a></li>
+            <li><a href="#" data-seasons="2-3">2-3 Saisons</a></li>
+            <li><a href="#" data-seasons="4-6">4-6 Saisons</a></li>
+            <li><a href="#" data-seasons="7+">7+ Saisons</a></li>
+          </ul>
+
+          <!-- DURÉE ÉPISODES -->
+          <h5 class="fw-bold mb-3 text-uppercase">Durée</h5>
+          <ul class="list-unstyled genres-list mb-4">
+            <li><a href="#" data-duration="short">Court (< 30min)</a></li>
+            <li><a href="#" data-duration="medium">Moyen (30-60min)</a></li>
+            <li><a href="#" data-duration="long">Long (> 60min)</a></li>
+          </ul>
+
+          <!-- TYPE DE SRIE -->
+          <h5 class="fw-bold mb-3 text-uppercase">Type</h5>
+          <ul class="list-unstyled genres-list mb-4">
+            <li><a href="#" data-type="series">Série TV</a></li>
+            <li><a href="#" data-type="miniseries">Mini-série</a></li>
+            <li><a href="#" data-type="Webséries">Web-série</a></li>
+            <li><a href="#" data-type="anthology">Anthologie</a></li>
+          </ul>
+
+          <!-- RECOMMANDATION -->
+          <h5 class="fw-bold mb-3 text-uppercase">Tendances</h5>
+          <div class="recommendations d-flex flex-wrap gap-2">
+            <img src="assets/images/image7.jpg" alt="Série 1" loading="lazy" decoding="async">
+            <img src="assets/images/image8.jpg" alt="Série 2" loading="lazy" decoding="async">
+            <img src="assets/images/image9.jpg" alt="Série 3" loading="lazy" decoding="async">
+            <img src="assets/images/ceb1.jpg" alt="Série 4" loading="lazy" decoding="async">
+            <img src="assets/images/F1.jpg" alt="Série 5" loading="lazy" decoding="async">
+            <img src="assets/images/F2.jpg" alt="Série 6" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <!-- COLONNE DROITE : FILTRES & SÉRIES -->
+      <div class="col-lg-9 col-md-8">
+        
+        <!-- BARRE DE FILTRAGE RAPIDE DESKTOP -->
+        <div class="quick-filters mb-4 d-none d-md-block">
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <!-- Recherche -->
+            <div class="filter-search-box" style="flex: 1; min-width: 200px;">
+              <i class="fas fa-search"></i>
+              <input type="text" id="searchInput" placeholder="Rechercher une série..." data-key="search_placeholder" class="bg-white/5 border border-white/20 text-white rounded-full">
+            </div>
+            
+            <!-- Filtres desktop -->
+            <select aria-label="Filtrer par pays" class="filter-select bg-white/5 border border-white/20 text-white rounded-full" id="countryFilter" data-animate="fade-up">
+              <option value="">Tous les pays</option>
+              <option value="senegal">Sénégal</option>
+              <option value="nigeria">Nigeria</option>
+              <option value="cameroun">Cameroun</option>
+              <option value="cotedivoire">Côte d'Ivoire</option>
+              <option value="ghana">Ghana</option>
+              <option value="kenya">Kenya</option>
+              <option value="afrique-sud">Afrique du Sud</option>
+              <option value="maroc">Maroc</option>
+              <option value="burkina-faso">Burkina Faso</option>
+              <option value="mali">Mali</option>
+              <option value="benin">Bénin</option>
+              <option value="togo">Togo</option>
+            </select>
+            
+            <select aria-label="Filtrer par année" class="filter-select bg-white/5 border border-white/20 text-white rounded-full" id="yearFilter" data-animate="fade-up">
+              <option value="">Année</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+            </select>
+            
+            <select aria-label="Filtrer par statut" class="filter-select bg-white/5 border border-white/20 text-white rounded-full" id="statusFilter" data-animate="fade-up">
+              <option value="">Tous statuts</option>
+              <option value="ongoing">En cours</option>
+              <option value="completed">Terminée</option>
+              <option value="upcoming">À venir</option>
+              <option value="cancelled">Annulée</option>
+            </select>
+            
+            <select aria-label="Filtrer par nombre de saisons" class="filter-select bg-white/5 border border-white/20 text-white rounded-full" id="seasonsFilter" data-animate="fade-up">
+              <option value="">Nb saisons</option>
+              <option value="1">1 Saison</option>
+              <option value="2-3">2-3 Saisons</option>
+              <option value="4-6">4-6 Saisons</option>
+              <option value="7+">7+ Saisons</option>
+            </select>
+            
+            <button class="btn btn-ghost btn-circle btn-reset" id="resetFilters" aria-label="Réinitialiser les filtres">
+              <i class="fas fa-redo"></i>
+            </button>
+          </div>
+          
+          <!-- Tags filtres actifs desktop -->
+          <div class="active-filters-tags" id="activeFiltersTags"></div>
+        </div>
+
+        <!-- BARRE DE FILTRAGE RAPIDE MOBILE -->
+        <div class="quick-filters mb-4 d-md-none" style="margin-top: 80px;">
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <!-- Bouton toggle filtres sur mobile -->
+            <button class="btn btn-primary btn-sm rounded-full btn-toggle-filters" id="toggleFilters">
+              <i class="fas fa-filter"></i> Filtres
+            </button>
+          </div>
+          
+          <!-- Filtres mobile -->
+          <div class="filters-collapse d-md-none" id="filtersCollapse">
+            <select aria-label="Filtrer par pays" class="filter-select bg-white/5 border border-white/20 text-white rounded-full" id="countryFilterMobile" data-animate="fade-up">
+              <option value="">Tous les pays</option>
+              <option value="senegal">Sénégal</option>
+              <option value="nigeria">Nigeria</option>
+              <option value="cameroun">Cameroun</option>
+              <option value="cotedivoire">Côte d'Ivoire</option>
+              <option value="ghana">Ghana</option>
+              <option value="kenya">Kenya</option>
+              <option value="afrique-sud">Afrique du Sud</option>
+              <option value="maroc">Maroc</option>
+              <option value="burkina-faso">Burkina Faso</option>
+              <option value="mali">Mali</option>
+              <option value="benin">Bénin</option>
+              <option value="togo">Togo</option>
+            </select>
+            <select aria-label="Filtrer par année" class="filter-select bg-white/5 border border-white/20 text-white rounded-full" id="yearFilterMobile" data-animate="fade-up">
+              <option value="">Année</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+            </select>
+            <select aria-label="Filtrer par statut" class="filter-select bg-white/5 border border-white/20 text-white rounded-full" id="statusFilterMobile" data-animate="fade-up">
+              <option value="">Tous statuts</option>
+              <option value="ongoing">En cours</option>
+              <option value="completed">Terminée</option>
+              <option value="upcoming">À venir</option>
+              <option value="cancelled">Annulée</option>
+            </select>
+            <select aria-label="Filtrer par nombre de saisons" class="filter-select bg-white/5 border border-white/20 text-white rounded-full" id="seasonsFilterMobile" data-animate="fade-up">
+              <option value="">Nb saisons</option>
+              <option value="1">1 Saison</option>
+              <option value="2-3">2-3 Saisons</option>
+              <option value="4-6">4-6 Saisons</option>
+              <option value="7+">7+ Saisons</option>
+            </select>
+            <button class="btn btn-ghost btn-circle btn-reset" id="resetFiltersMobile" aria-label="Réinitialiser les filtres">
+              <i class="fas fa-redo"></i>
+            </button>
+          </div>
+
+          <!-- Tags filtres actifs mobile -->
+          <div class="active-filters-tags" id="activeFiltersTagsMobile"></div>
+        </div>
+
+        <!-- TITRE -->
+        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2" data-animate="fade-up">
+          <span class="w-1 h-6 bg-primary rounded-full"></span>
+          Séries Populaires
+        </h3>
+
+        <!-- GRILLE SÉRIES -->
+        <div class="row g-4" id="seriesGrid">
+          <!-- Les séries seront chargées dynamiquement -->
+        </div>
+        
+        <!-- BARRE RÉSULTATS -->
+        <div class="results-info mt-4">
+          <span><strong id="resultsCount">0</strong> séries</span>
+          <select aria-label="Trier les résultats" class="sort-select" id="sortSelect" data-animate="fade-up">
+            <option value="recent">Plus récentes</option>
+            <option value="rating">Mieux notées</option>
+            <option value="title">Titre A-Z</option>
+          </select>
+        </div>
+
+        <!-- PAGINATION -->
+        <div id="pagination" class="mt-4"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+</main>
+<footer class="footer text-light pt-5 pb-4" style="background-color: #000;">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-start mb-4">
+      <div class="partenaires-section">
+        <h5 class="fw-bold mb-3" data-key="footer_partenaires">Partenaires</h5>
+        <div class="d-flex flex-wrap align-items-center gap-4" id="footerPartners"><!-- Chargé dynamiquement via API --></div>
+        <div class="footer-stats mt-3 text-secondary small" id="footerStats"></div>
+      </div>
+
+      <div class="newsletter-section text-end">
+        <h5 class="fw-bold mb-3" data-key="footer_newsletter">Newsletter</h5>
+        <form class="d-flex" role="form">
+          <input type="email" class="form-control me-2 bg-dark text-light border-secondary" placeholder="Votre email">
+          <button class="btn btn-danger px-3" data-key="footer_sabonner">S'abonner</button>
+        </form>
+      </div>
+    </div>
+
+    <hr class="border-secondary opacity-50">
+
+    <div class="row text-secondary">
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">À propos</h6>
+        <ul class="list-unstyled small">
+          <li><a href="about.html" class="footer-link" data-key="footer_qui_sommes_nous">Qui sommes-nous</a></li>
+          <li><a href="partenaires.html" class="footer-link">Partenaires</a></li>
+          <li><a href="contact.html" class="footer-link" data-key="footer_contact">Contact</a></li>
+          <li><a href="faq.html" class="footer-link">FAQ</a></li>
+          <li><a href="selections.html" class="footer-link" data-key="menu_selections">Sélections</a></li>
+          <li><a href="festivals.html" class="footer-link" data-key="menu_festivals">Festivals</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Films</h6>
+        <ul class="list-unstyled small">
+          <li><a href="films.html?sort=recent" class="footer-link">Nouveautés</a></li>
+          <li><a href="films.html" class="footer-link">À l'Affiche</a></li>
+          <li><a href="films.html?filter=upcoming" class="footer-link">À venir</a></li>
+          <li><a href="films.html" class="footer-link">Par pays</a></li>
+          <li><a href="films.html" class="footer-link">Par langue</a></li>
+          <li><a href="films.html?sort=rating" class="footer-link">Box-office</a></li>
+          <li><a href="films.html" class="footer-link">Tous les films</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Séries</h6>
+        <ul class="list-unstyled small">
+          <li><a href="series.html?sort=recent" class="footer-link">Nouveautés</a></li>
+          <li><a href="series.html?filter=ongoing" class="footer-link">En cours</a></li>
+          <li><a href="series.html?filter=upcoming" class="footer-link">À venir</a></li>
+          <li><a href="series.html" class="footer-link">Par pays</a></li>
+          <li><a href="series.html" class="footer-link">Par genre</a></li>
+          <li><a href="series.html" class="footer-link">Toutes les séries</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Émissions</h6>
+        <ul class="list-unstyled small">
+          <li><a href="emissions.html?category=interview" class="footer-link">Interviews</a></li>
+          <li><a href="emissions.html?category=talkshow" class="footer-link">Talk-shows</a></li>
+          <li><a href="emissions.html?category=podcast" class="footer-link">Podcasts</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Communauté</h6>
+        <ul class="list-unstyled small">
+          <li><a href="communaute.html#casting" class="footer-link">Casting</a></li>
+          <li><a href="communaute.html#projets" class="footer-link">Projets</a></li>
+          <li><a href="communaute.html#concours" class="footer-link">Concours</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-secondary opacity-50 mt-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-secondary small">
+      <p class="mb-2 mb-md-0" data-key="footer_copyright">© 2026 BlackCiné. Tous droits réservés.</p>
+      <div class="d-flex flex-wrap justify-content-center">
+        <a href="confidentialite.html" class="footer-link me-2">Confidentialité</a> |
+        <a href="mentions-legales.html" class="footer-link mx-2">Mentions légales</a> |
+        <a href="cgu.html" class="footer-link mx-2">CGU</a> |
+        <a href="cgv.html" class="footer-link mx-2">CGV</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/api-config.js"></script>
+<script src="assets/js/tmdb-service.js"></script>
+<script src="assets/js/tvmaze-service.js"></script>
+<script src="assets/js/streaming-service.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/sanitize.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/series.js"></script>
+<script src="assets/js/footer.js"></script>
+<script src="assets/js/favorites.js"></script>
+<script src="assets/js/sharing.js"></script>
+<script src="assets/js/modern-ui.js"></script>
+<script src="assets/js/page-transitions.js"></script>
+<script src="assets/js/form-animations.js"></script>
+<script src="assets/js/accessibility.js"></script>
+<script src="assets/js/mobile-interactions.js"></script>
+<script src="assets/js/performance.js"></script>
+<script src="assets/js/skeletons.js"></script>
+
+</body>
+</html>

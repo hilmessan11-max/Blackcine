@@ -1,0 +1,127 @@
+﻿/* ============================================
+   CARDS
+   Movie cards, article cards, trailer cards,
+   selection cards, festival cards, winner cards,
+   news cards, opportunity cards, classic cards,
+   director cards, partner cards.
+   ============================================ */
+
+/* ============================================
+   ARTICLE CARDS
+   ============================================ */
+.article-card {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  border-color: #E50914;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.article-img-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  background: #f5f5f5;
+}
+
+.article-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.article-card:hover .article-img {
+  transform: scale(1.03);
+}
+
+.article-card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-date {
+  font-size: 0.75rem;
+  color: #999999;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.article-title {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #000000;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article-text {
+  font-size: 0.85rem;
+  color: #888888;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.btn-read {
+  align-self: flex-start;
+  background: transparent;
+  color: #E50914;
+  border: none;
+  padding: 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-read:hover {
+  color: #000000;
+  gap: 10px;
+}
+
+.btn-read i {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-read:hover i {
+  transform: translateX(3px);
+}
+
+.article-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #E50914;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+

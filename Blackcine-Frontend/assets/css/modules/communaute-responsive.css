@@ -1,0 +1,91 @@
+﻿/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-stats {
+    gap: 25px;
+  }
+  
+  .join-card {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  
+  .contests-timeline {
+    padding-left: 0;
+  }
+  
+  .contest-date {
+    position: static;
+    margin-bottom: 15px;
+  }
+  
+  .contests-timeline::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+  }
+  
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .casting-card {
+    margin-bottom: 20px;
+  }
+  
+  .join-card {
+    padding: 30px 20px;
+  }
+  
+  .join-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contest-title {
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .contest-badge {
+    position: static;
+    margin-bottom: 15px;
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-stats {
+    gap: 20px;
+  }
+  
+  .hero-stats .stat-number {
+    font-size: 1.6rem;
+  }
+  
+  .nav-tabs-custom {
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .join-content h2 {
+    font-size: 1.6rem;
+  }
+}

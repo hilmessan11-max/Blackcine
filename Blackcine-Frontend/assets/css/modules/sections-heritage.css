@@ -1,0 +1,22 @@
+﻿/* ============================================
+   HERITAGE SECTION
+   ============================================ */
+.heritage-section {
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  padding: var(--section-padding-y) var(--section-padding-x);
+  max-width: var(--section-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === SECTION AUTRES CLASSIQUES === */
+.other-classics-section {
+  margin-bottom: 50px;
+}
+
+/* === SECTION RÉALISATEURS LÉGENDAIRES === */
+.legendary-directors-section {
+  margin-bottom: 50px;
+}
+

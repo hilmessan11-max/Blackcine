@@ -1,0 +1,175 @@
+﻿/* ============================================
+   TICKET SECTION
+   ============================================ */
+.ticket-section {
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* === FILTRES === */
+.ticket-filters-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.ticket-filter-btn {
+  background: white;
+  border: 1px solid #e8e8e8;
+  color: #888888;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticket-filter-btn i {
+  font-size: 0.8rem;
+}
+
+.ticket-filter-btn:hover {
+  border-color: #E50914;
+  color: #E50914;
+  transform: translateY(-2px);
+}
+
+.ticket-filter-btn.active {
+  background: #E50914;
+  border-color: #E50914;
+  color: white;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.25);
+}
+
+/* === CARROUSEL WRAPPER === */
+.ticket-carousel-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.ticket-carousel-container {
+  overflow: hidden;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.ticket-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 0;
+  width: 400%; /* 4 tickets = 400% */
+  transform: translateX(0%);
+}
+
+.ticket-carousel-item {
+  min-width: 25%; /* Chaque ticket = 25% du track */
+  flex-shrink: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* === CONTRÔLES CARROUSEL === */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  background: white;
+  border: 2px solid #e8e8e8;
+  border-radius: 50%;
+  color: #666;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-nav:hover {
+  background: #E50914;
+  border-color: #E50914;
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-nav {
+  left: -20px;
+}
+
+.next-nav {
+  right: -20px;
+}
+
+.ticket-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  background: white;
+  border: 2px solid #e8e8e8;
+  border-radius: 50%;
+  color: #666;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-carousel-control:hover {
+  background: #E50914;
+  border-color: #E50914;
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.ticket-carousel-control.prev {
+  left: -20px;
+}
+
+.ticket-carousel-control.next {
+  right: -20px;
+}
+
+/* === INDICATEURS === */
+.ticket-carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover {
+  background: #E50914;
+  transform: scale(1.2);
+}
+
+.indicator.active {
+  background: #E50914;
+  width: 30px;
+  border-radius: 5px;
+}
+

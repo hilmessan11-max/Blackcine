@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackCiné - Détail du Festival</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+<!-- SEO Meta Tags -->
+<meta name="description" content="Détail du festival - BlackCiné">
+<meta name="keywords" content="cinéma africain, films, séries, actualités, BlackCiné">
+<meta name="author" content="BlackCiné">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blackcine.com/festival-detail.html">
+<meta property="og:title" content="Festival - BlackCiné">
+<meta property="og:description" content="Détail du festival - BlackCiné">
+<meta property="og:image" content="/assets/images/og-default.jpg">
+<meta property="og:site_name" content="BlackCiné">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Festival - BlackCiné">
+<meta name="twitter:description" content="Détail du festival - BlackCiné">
+<meta name="twitter:image" content="/assets/images/og-default.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="assets/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .festival-detail-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      min-height: 400px;
+      position: relative;
+      overflow: hidden;
+    }
+    .festival-hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 80px 0 40px;
+      color: #fff;
+    }
+    .festival-hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+    .festival-meta {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+    .festival-meta span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .festival-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      opacity: 0.9;
+      margin: 25px 0;
+      max-width: 800px;
+    }
+    .festival-section {
+      padding: 60px 0;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 24px;
+      background: #E50914;
+      border-radius: 2px;
+    }
+    .section-title h2 {
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .lineup-card {
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      cursor: pointer;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .lineup-card:hover { transform: translateY(-5px); border-color: rgba(229,9,20,0.3); }
+    .lineup-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .lineup-card .lineup-info {
+      padding: 15px;
+    }
+    .lineup-card h6 {
+      margin: 0 0 5px;
+      font-weight: 600;
+    }
+    .lineup-card .lineup-meta {
+      font-size: 0.85rem;
+      color: #666;
+    }
+    .festival-stats {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .festival-stat {
+      text-align: center;
+      padding: 20px 30px;
+      background: #f8f9fa;
+      border-radius: 12px;
+    }
+    .festival-stat .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #E50914;
+    }
+    .festival-stat .stat-label {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 5px;
+    }
+    @media (max-width: 768px) {
+      .festival-hero-content h1 { font-size: 2rem; }
+      .festival-meta { justify-content: center; }
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/design-system.css">
+<link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+<body>
+<!-- Skip Navigation -->
+<a href="#main-content" class="sr-only sr-only-focusable">Aller au contenu principal</a>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <a href="index.html" class="logo"><img src="assets/images/log3.png" alt="BlackCiné - Logo" width="120"></a>
+    <nav class="nav-menu" aria-label="Menu principal">
+      <div class="nav-item dropdown">
+        <a href="films.html" class="nav-link" aria-expanded="false" data-key="menu_films">FILMS <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="films.html">Tous les films</a>
+        </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a href="series.html" class="nav-link" aria-expanded="false" data-key="menu_series">SÉRIES <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="series.html">Toutes les séries</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="emissions.html" class="nav-link" data-key="menu_emissions">ÉMISSIONS</a>
+      </div>
+      <div class="nav-item">
+        <a href="actualites.html" class="nav-link" data-key="menu_actualites">ACTUALITÉS</a>
+      </div>
+      <div class="nav-item">
+        <a href="communaute.html" class="nav-link" data-key="menu_communaute">COMMUNAUTÉ</a>
+      </div>
+    
+
+      <div class="nav-item">
+        <a href="selections.html" class="nav-link" data-key="menu_selections">SÉLECTIONS</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="festivals.html" class="nav-link" data-key="menu_festivals">FESTIVALS</a>
+      </div>
+    </nav>
+      <!-- Bouton menu mobile -->
+      <button class="mobile-menu-toggle d-md-none btn btn-ghost btn-circle text-white" id="mobileMenuToggle" aria-label="Ouvrir le menu mobile">
+        <i class="fas fa-bars text-lg"></i>
+      </button>
+    <div class="auth-buttons">
+      <button class="btn btn-ghost btn-sm text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200" id="lang-toggle" data-key="btn_lang">Français<i class="fa-solid fa-chevron-down"></i></button>
+      <a href="login.html" class="btn btn-primary btn-sm rounded-full px-5 py-2 text-white font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all duration-200" data-key="btn_login">CONNEXION</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-content">
+    <div class="mobile-nav-item">
+      <a href="films.html" class="mobile-nav-link" data-key="menu_films">FILMS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="series.html" class="mobile-nav-link" data-key="menu_series">SÉRIES</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="emissions.html" class="mobile-nav-link" data-key="menu_emissions">ÉMISSIONS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="actualites.html" class="mobile-nav-link" data-key="menu_actualites">ACTUALITÉS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="communaute.html" class="mobile-nav-link" data-key="menu_communaute">COMMUNAUTÉ</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="selections.html" class="mobile-nav-link" data-key="menu_selections">SÉLECTIONS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="festivals.html" class="mobile-nav-link" data-key="menu_festivals">FESTIVALS</a>
+    </div>
+  </div>
+</div>
+
+<main id="main-content" class="flex-1">
+<!-- Breadcrumb -->
+<nav aria-label="Fil d'Ariane" class="container" style="margin-top: 80px; padding-bottom: 0;">
+  <ol class="breadcrumb flex items-center gap-2 text-sm" style="list-style: none; display: flex; padding: 0; margin: 0;">
+    <li class="breadcrumb-item"><a href="index.html" class="text-white/60 hover:text-primary transition-colors" data-key="nav_home">Accueil</a></li>
+    <li class="breadcrumb-item"><a href="festivals.html" class="text-white/60 hover:text-primary transition-colors">Festivals</a></li>
+    <li class="breadcrumb-item active text-white" aria-current="page" style="color: #fff;">Festival</li>
+  </ol>
+</nav>
+<!-- LOADING STATE -->
+<div id="loadingState" class="text-center py-5" style="margin-top: 80px;">
+  <div class="spinner-border text-danger" role="status">
+    <span class="visually-hidden">Chargement...</span>
+  </div>
+  <p class="mt-3 text-muted">Chargement du festival...</p>
+</div>
+
+<!-- FESTIVAL DETAIL -->
+<div id="festivalDetail" style="display: none;">
+
+  <!-- HERO SECTION -->
+  <section class="festival-detail-hero">
+    <div class="container">
+      <div class="festival-hero-content">
+        <h1 id="festivalTitle" class="text-2xl font-bold text-white mb-4" data-animate="fade-up">Titre du Festival</h1>
+        <div class="festival-meta">
+          <span id="festivalDates" class="text-white/40 text-xs uppercase tracking-wider"><i class="fas fa-calendar-alt"></i> Dates du festival</span>
+          <span id="festivalLocation" class="text-white/40 text-xs uppercase tracking-wider"><i class="fas fa-map-marker-alt"></i> Lieu</span>
+        </div>
+        <p class="festival-description text-white/70 leading-relaxed" id="festivalDescription">
+          Description du festival...
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="festival-section" style="background: #f8f9fa;">
+    <div class="container">
+      <div class="festival-stats justify-content-center" id="festivalStats" data-animate="fade-up" data-stagger="80"></div>
+    </div>
+  </section>
+
+  <!-- LINEUP / SELECTIONS -->
+  <section class="festival-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="text-2xl font-bold text-white mb-4" data-animate="fade-up">Sélection & Programme</h2>
+      </div>
+      <div class="row g-4" id="lineupContainer" data-animate="fade-up" data-stagger="80">
+        <div class="col-12 text-center py-4">
+          <p class="text-muted">Aucune sélection disponible pour le moment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+
+</main>
+<footer class="footer text-light pt-5 pb-4" style="background-color: #000;">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-start mb-4">
+      <div class="partenaires-section">
+        <h5 class="fw-bold mb-3" data-key="footer_partenaires">Partenaires</h5>
+        <div class="d-flex flex-wrap align-items-center gap-4" id="footerPartners"></div>
+        <div class="footer-stats mt-3 text-secondary small" id="footerStats"></div>
+      </div>
+      <div class="newsletter-section text-end">
+        <h5 class="fw-bold mb-3" data-key="footer_newsletter">Newsletter</h5>
+        <form class="d-flex" role="form">
+          <input type="email" class="form-control me-2 bg-dark text-light border-secondary" placeholder="Votre email">
+          <button class="btn btn-danger px-3" data-key="footer_sabonner">S'abonner</button>
+        </form>
+      </div>
+    </div>
+    <hr class="border-secondary opacity-50">
+    <div class="row text-secondary">
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">À propos</h6>
+        <ul class="list-unstyled small">
+          <li><a href="about.html" class="footer-link">Qui sommes-nous</a></li>
+          <li><a href="partenaires.html" class="footer-link">Partenaires</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="faq.html" class="footer-link">FAQ</a></li>
+          <li><a href="selections.html" class="footer-link">Sélections</a></li>
+          <li><a href="festivals.html" class="footer-link">Festivals</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Films</h6>
+        <ul class="list-unstyled small">
+          <li><a href="films.html" class="footer-link">Nouveautés</a></li>
+          <li><a href="films.html" class="footer-link">À l'Affiche</a></li>
+          <li><a href="films.html" class="footer-link">À venir</a></li>
+          <li><a href="films.html" class="footer-link">Par pays</a></li>
+          <li><a href="films.html" class="footer-link">Par langue</a></li>
+          <li><a href="films.html" class="footer-link">Box-office</a></li>
+          <li><a href="films.html" class="footer-link">Tous les films</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Séries</h6>
+        <ul class="list-unstyled small">
+          <li><a href="series.html" class="footer-link">Nouveautés</a></li>
+          <li><a href="series.html" class="footer-link">En cours</a></li>
+          <li><a href="series.html" class="footer-link">À venir</a></li>
+          <li><a href="series.html" class="footer-link">Par pays</a></li>
+          <li><a href="series.html" class="footer-link">Par genre</a></li>
+          <li><a href="series.html" class="footer-link">Toutes les séries</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Émissions</h6>
+        <ul class="list-unstyled small">
+          <li><a href="emissions.html" class="footer-link">Interviews</a></li>
+          <li><a href="emissions.html" class="footer-link">Talk-shows</a></li>
+          <li><a href="emissions.html" class="footer-link">Podcasts</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Communauté</h6>
+        <ul class="list-unstyled small">
+          <li><a href="communaute.html" class="footer-link">Casting</a></li>
+          <li><a href="communaute.html" class="footer-link">Projets</a></li>
+          <li><a href="communaute.html" class="footer-link">Concours</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary opacity-50 mt-4">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-secondary small">
+      <p class="mb-2 mb-md-0">© 2026 BlackCiné. Tous droits réservés.</p>
+      <div class="d-flex flex-wrap justify-content-center">
+        <a href="confidentialite.html" class="footer-link me-2">Confidentialité</a> |
+        <a href="mentions-legales.html" class="footer-link mx-2">Mentions légales</a> |
+        <a href="cgu.html" class="footer-link mx-2">CGU</a> |
+        <a href="cgv.html" class="footer-link mx-2">CGV</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/sanitize.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/festival-detail.js"></script>
+<script src="assets/js/footer.js"></script>
+<script src="assets/js/favorites.js"></script>
+<script src="assets/js/sharing.js"></script>
+<script src="assets/js/modern-ui.js"></script>
+<script src="assets/js/page-transitions.js"></script>
+<script src="assets/js/form-animations.js"></script>
+<script src="assets/js/accessibility.js"></script>
+<script src="assets/js/mobile-interactions.js"></script>
+<script src="assets/js/performance.js"></script>
+<script src="assets/js/skeletons.js"></script>
+
+</body>
+</html>

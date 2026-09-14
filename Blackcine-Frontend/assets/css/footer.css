@@ -1,0 +1,32 @@
+/* ============================================
+   FOOTER
+   Footer styles, links, and related elements.
+   ============================================ */
+
+.footer-link {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer input::placeholder {
+  color: #aaa;
+}
+
+.footer button.btn-danger {
+  background-color: #E50914;
+  border: none;
+}
+
+.footer button.btn-danger:hover {
+  background-color: #E50914;
+}

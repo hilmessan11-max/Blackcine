@@ -1,0 +1,15 @@
+﻿/* ============================================
+   PARTNERS SECTION
+   ============================================ */
+.partners-section {
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  padding: var(--section-padding-y) var(--section-padding-x);
+  max-width: 100%;
+}
+
+.partners-section .container.narrow {
+  max-width: var(--section-max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}

@@ -1,0 +1,222 @@
+﻿/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (min-width: 1200px) {
+  .col-film, .col-series {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .col-film, .col-series {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (max-width: 992px) {
+  .movies-section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .sidebar {
+    margin-bottom: 30px;
+    position: static;
+  }
+
+  .col-film, .col-series {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 0 8px;
+    margin-bottom: 20px;
+  }
+
+  .movie-card > img,
+  .series-card > img {
+    height: 250px;
+  }
+
+  .recommendations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movies-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .movies-section h3::before {
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movies-section {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  .sidebar {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .col-film, .col-series {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 8px;
+    margin-bottom: 18px;
+  }
+
+  .movie-card > img,
+  .series-card > img {
+    height: 230px;
+  }
+
+  .movie-info, .series-info {
+    padding: 12px;
+  }
+
+  .movie-title, .series-title {
+    font-size: 0.9rem;
+  }
+
+  .rating {
+    font-size: 0.8rem;
+  }
+
+  .rating i {
+    font-size: 0.9rem;
+  }
+
+  .badge-year {
+    bottom: 75px;
+    left: 10px;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .badge-status {
+    bottom: 75px;
+  }
+
+  .badge-hd, .badge-quality {
+    top: 10px;
+    right: 10px;
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+
+  .badge-seasons {
+    top: 10px;
+    left: 10px;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .movies-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .movies-section h3::before {
+    width: 4px;
+    height: 28px;
+  }
+
+  .quick-filters-wrapper {
+    flex-direction: column;
+  }
+
+  .filter-search-box,
+  .filter-select {
+    width: 100%;
+  }
+
+  .btn-reset {
+    width: 100%;
+  }
+
+  .results-info {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .sort-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .movies-section {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+
+  .sidebar {
+    padding: 18px;
+  }
+
+  .col-film, .col-series {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 5px;
+    margin-bottom: 15px;
+  }
+
+  .movie-card > img,
+  .series-card > img {
+    height: 320px;
+  }
+
+  .movie-card::after,
+  .series-card::after {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .movie-info, .series-info {
+    padding: 14px;
+  }
+
+  .movie-title, .series-title {
+    font-size: 1rem;
+  }
+
+  .rating {
+    font-size: 0.85rem;
+  }
+
+  .badge-year {
+    bottom: 95px;
+  }
+
+  .badge-status {
+    bottom: 95px;
+  }
+
+  .recommendations {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .recommendations img {
+    height: 100px;
+  }
+
+  .movies-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+
+  .genres-list li {
+    margin-bottom: 8px;
+  }
+
+  .genres-list li a {
+    font-size: 0.85rem;
+  }
+}

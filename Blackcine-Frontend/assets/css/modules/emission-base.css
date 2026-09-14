@@ -1,0 +1,18 @@
+﻿/* === VARIABLES (héritées de styles.css) === */
+:root {
+  --primary-red: #E50914;
+  --dark-bg: #0a0a0a;
+  --card-bg: #ffffff;
+  --text-dark: #1a1a1a;
+  --text-gray: #6b7280;
+  --border-light: #e5e7eb;
+  --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  
+  /* Variables de marges uniformes (héritées) */
+  --section-padding-y: 80px;
+  --section-padding-x: 20px;
+  --section-max-width: 1140px;
+  --section-title-mb: 50px;
+}
+
+/* === HERO ÉMISSION EN DIRECT === */

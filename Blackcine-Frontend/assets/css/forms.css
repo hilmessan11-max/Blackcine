@@ -1,0 +1,42 @@
+/* ============================================
+   FORMS
+   Form inputs, selects, newsletter forms,
+   and search input styles.
+   ============================================ */
+
+/* === SIGNUP FORM INPUTS === */
+.signup-input {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.signup-input:focus {
+  border-color: #E50914;
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.1);
+  outline: none;
+}
+
+.signup-input::placeholder {
+  color: #aaa;
+}
+
+.signup-modal .form-label {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* === NEWSLETTER FORM === */
+.newsletter-section form {
+  justify-content: flex-end;
+}
+
+.newsletter-section input.form-control {
+  width: 200px;
+  padding: 10px 10px;
+  font-size: 0.85rem;
+}

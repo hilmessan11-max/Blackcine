@@ -1,0 +1,13 @@
+﻿/* ============================================
+   PAGE ACTUALITÉS - STYLES
+   ============================================ */
+
+/* === HEADER FIXE SOMBRE === */
+@import url('modules/actualites-base.css');
+@import url('modules/actualites-layout.css');
+@import url('modules/actualites-popular.css');
+@import url('modules/actualites-featured.css');
+@import url('modules/actualites-cards.css');
+@import url('modules/actualites-pagination.css');
+@import url('modules/actualites-responsive.css');
+

@@ -1,0 +1,1195 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackCiné - Communauté</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+<!-- SEO Meta Tags -->
+<meta name="description" content="Communauté BlackCiné - Castings, projets, concours">
+<meta name="keywords" content="cinéma africain, films, séries, actualités, BlackCiné">
+<meta name="author" content="BlackCiné">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blackcine.com/communaute.html">
+<meta property="og:title" content="Communauté - BlackCiné">
+<meta property="og:description" content="Communauté BlackCiné - Castings, projets, concours">
+<meta property="og:image" content="/assets/images/og-default.jpg">
+<meta property="og:site_name" content="BlackCiné">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Communauté - BlackCiné">
+<meta name="twitter:description" content="Communauté BlackCiné - Castings, projets, concours">
+<meta name="twitter:image" content="/assets/images/og-default.jpg">
+  
+  <!-- BOOTSTRAP (local) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="assets/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+  
+  <!-- BOOTSTRAP ICONS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  
+  <!-- FONTAWESOME (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  
+  <!-- CSS PERSONNALISÉ -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/communaute.css">
+  <link rel="stylesheet" href="assets/css/design-system.css">
+<link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+<body>
+<!-- Skip Navigation -->
+<a href="#main-content" class="sr-only sr-only-focusable">Aller au contenu principal</a>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <a href="index.html" class="logo"><img src="assets/images/log3.png" alt="BlackCiné - Logo" width="120"></a>
+
+    <nav class="nav-menu" aria-label="Menu principal">
+      <div class="nav-item dropdown">
+        <a href="films.html" class="nav-link" aria-expanded="false" data-key="menu_films">FILMS <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="menu_films_nouveautes">Nouveautés</a>
+          <a href="#" data-key="menu_films_affiche">À l'Affiche</a>
+          <a href="#" data-key="menu_films_avvenir">À venir</a>
+          <a href="#" data-key="menu_films_pays">Par pays</a>
+          <a href="#" data-key="menu_films_langue">Par langue</a>
+          <a href="#" data-key="menu_films_boxoffice">Box-office</a>
+          <a href="#" data-key="menu_films_courts">Courts-métrages & Webfilms</a>
+          <a href="#" data-key="menu_films_classiques">Classiques africains</a>
+          <a href="#" data-key="menu_films_tous">Tous les films</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="series.html" class="nav-link" aria-expanded="false" data-key="menu_series">SÉRIES <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="menu_series_nouveautes">Nouveautés</a>
+          <a href="#" data-key="menu_series_en_cours">En cours</a>
+          <a href="#" data-key="menu_series_avvenir">À venir</a>
+          <a href="#" data-key="menu_series_pays">Par pays</a>
+          <a href="#" data-key="menu_series_genre">Par genre</a>
+          <a href="#" data-key="menu_series_webmini">Webséries & Mini-séries</a>
+          <a href="#" data-key="menu_series_cultes">Séries cultes africaines</a>
+          <a href="#" data-key="menu_series_toutes">Toutes les séries</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="emissions.html" class="nav-link" aria-expanded="false" data-key="menu_emissions">ÉMISSIONS <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="menu_emissions_interviews">Interviews</a>
+          <a href="#" data-key="menu_emissions_talkshows">Talk-shows</a>
+          <a href="#" data-key="menu_emissions_chroniques">Chroniques</a>
+          <a href="#" data-key="menu_emissions_makingof">Making-of</a>
+          <a href="#" data-key="menu_emissions_podcasts">Podcasts</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="actualites.html" class="nav-link" aria-expanded="false" data-key="menu_actualites">ACTUALITÉS <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="menu_actualites_news">News</a>
+          <a href="#" data-key="menu_actualites_interviews">Interviews</a>
+          <a href="#" data-key="menu_actualites_critiques">Critiques</a>
+          <a href="#" data-key="menu_actualites_festivals">Festivals & événements</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="communaute.html" class="nav-link active" aria-expanded="false" data-key="menu_communaute">COMMUNAUTÉ <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#casting" data-key="menu_communaute_casting">Casting</a>
+          <a href="#projets" data-key="menu_communaute_projets">Projets</a>
+          <a href="#concours" data-key="menu_communaute_concours">Concours</a>
+          <a href="#rejoindre" data-key="menu_communaute_rejoindre">Rejoindre la Communauté</a>
+        </div>
+      </div>
+    
+
+      <div class="nav-item">
+        <a href="selections.html" class="nav-link" data-key="menu_selections">SÉLECTIONS</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="festivals.html" class="nav-link" data-key="menu_festivals">FESTIVALS</a>
+      </div>
+    </nav>
+
+      <!-- Bouton menu mobile -->
+      <button class="mobile-menu-toggle d-md-none btn btn-ghost btn-circle text-white" id="mobileMenuToggle" aria-label="Ouvrir le menu mobile">
+        <i class="fas fa-bars text-lg"></i>
+      </button>
+    <div class="auth-buttons">
+      <button class="btn btn-ghost btn-sm text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200" id="lang-toggle" data-key="btn_lang">
+        Français<i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <a href="#" class="btn btn-primary btn-sm rounded-full px-5 py-2 text-white font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all duration-200" data-bs-toggle="modal" data-bs-target="#signupModal" data-key="btn_register">S'INSCRIRE</a>
+    </div>
+  </div>
+</header>
+
+
+
+
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-content">
+    <div class="mobile-nav-item">
+      <a href="films.html" class="mobile-nav-link" data-key="menu_films">FILMS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="series.html" class="mobile-nav-link" data-key="menu_series">SÉRIES</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="emissions.html" class="mobile-nav-link" data-key="menu_emissions">ÉMISSIONS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="actualites.html" class="mobile-nav-link" data-key="menu_actualites">ACTUALITÉS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="communaute.html" class="mobile-nav-link" data-key="menu_communaute">COMMUNAUTÉ</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="selections.html" class="mobile-nav-link" data-key="menu_selections">SÉLECTIONS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="festivals.html" class="mobile-nav-link" data-key="menu_festivals">FESTIVALS</a>
+    </div>
+  </div>
+</div>
+
+<main id="main-content" class="flex-1">
+<!-- NAVIGATION SECTIONS -->
+<section class="section-navigation">
+  <div class="container">
+    <div class="nav-tabs-custom" data-animate="fade-down">
+      <a href="#casting" class="bg-primary text-white border border-primary rounded-full px-4 py-2">
+        <i class="fas fa-video"></i>
+        <span>Castings</span>
+      </a>
+      <a href="#projets" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10 px-4 py-2">
+        <i class="fas fa-film"></i>
+        <span>Projets</span>
+      </a>
+      <a href="#concours" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10 px-4 py-2">
+        <i class="fas fa-trophy"></i>
+        <span>Concours</span>
+      </a>
+      <a href="#success" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10 px-4 py-2">
+        <i class="fas fa-star"></i>
+        <span>Histoires de Réussite</span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- SECTION CASTINGS -->
+<section class="castings-section" id="casting" style="padding-top: 160px;">
+  <div class="container">
+    <!-- En-tête -->
+    <div class="text-center mb-5">
+      <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2" data-animate="fade-up">
+        <span class="w-1 h-6 bg-primary rounded-full"></span>
+        Castings Ouverts
+      </h2>
+      <div class="section-divider"></div>
+      <p class="text-white/60">
+        Trouvez votre prochain rôle dans les productions africaines les plus prometteuses
+      </p>
+    </div>
+
+    <!-- Filtres -->
+    <div class="casting-filters">
+      <button class="bg-primary text-white border border-primary rounded-full px-4 py-2" data-filter="all">
+        <i class="fas fa-th"></i> Tous
+      </button>
+      <button class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10 px-4 py-2" data-filter="film">
+        <i class="fas fa-film"></i> Films
+      </button>
+      <button class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10 px-4 py-2" data-filter="serie">
+        <i class="fas fa-tv"></i> Séries
+      </button>
+      <button class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10 px-4 py-2" data-filter="pub">
+        <i class="fas fa-ad"></i> Publicités
+      </button>
+      <button class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10 px-4 py-2" data-filter="urgent">
+        <i class="fas fa-clock"></i> Urgents
+      </button>
+    </div>
+
+    <!-- Grille de castings -->
+    <div class="row g-4">
+      
+      <!-- Casting 1 -->
+      <div class="col-lg-6" data-animate="fade-up" data-stagger="80" data-parent-index="0">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="casting-header">
+            <div class="casting-type film">Film</div>
+            <div class="casting-urgent">
+              <i class="fas fa-clock"></i> Urgent
+            </div>
+          </div>
+          <div class="casting-body">
+            <h3 class="text-white font-semibold">Recherche acteurs pour long-métrage historique</h3>
+            <p class="text-white/60 text-sm">
+              Nous recherchons des acteurs pour incarner des personnages historiques dans notre prochain film sur l'Empire du Mali.
+            </p>
+            <div class="casting-details">
+              <div class="detail-item">
+                <i class="fas fa-users"></i>
+                <span><strong>Rôles :</strong> 5 rôles principaux, 12 secondaires</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>Lieu :</strong> Bamako, Mali</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-calendar"></i>
+                <span><strong>Tournage :</strong> Mars - Mai 2025</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-money-bill-wave"></i>
+                <span><strong>Rémunération :</strong> Selon expérience</span>
+              </div>
+            </div>
+            <div class="casting-tags">
+              <span class="tag">18-35 ans</span>
+              <span class="tag">Expérience requise</span>
+              <span class="tag">Danse traditionnelle</span>
+            </div>
+          </div>
+          <div class="casting-footer">
+            <div class="casting-deadline">
+              <i class="fas fa-hourglass-half"></i>
+              <span>Date limite : <strong>15 Déc 2025</strong></span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Postuler <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Casting 2 -->
+      <div class="col-lg-6" data-animate="fade-up" data-stagger="80" data-parent-index="1">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="casting-header">
+            <div class="casting-type serie">Série</div>
+          </div>
+          <div class="casting-body">
+            <h3 class="text-white font-semibold">Casting pour série dramatique nigériane</h3>
+            <p class="text-white/60 text-sm">
+              Production majeure recherche acteurs pour nouvelle série Nollywood sur la vie moderne à Lagos.
+            </p>
+            <div class="casting-details">
+              <div class="detail-item">
+                <i class="fas fa-users"></i>
+                <span><strong>Rôles :</strong> 8 rôles principaux</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>Lieu :</strong> Lagos, Nigeria</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-calendar"></i>
+                <span><strong>Tournage :</strong> Janvier 2025</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-money-bill-wave"></i>
+                <span><strong>Rémunération :</strong> Compétitive</span>
+              </div>
+            </div>
+            <div class="casting-tags">
+              <span class="tag">25-45 ans</span>
+              <span class="tag">Anglais fluent</span>
+              <span class="tag">Tous profils</span>
+            </div>
+          </div>
+          <div class="casting-footer">
+            <div class="casting-deadline">
+              <i class="fas fa-hourglass-half"></i>
+              <span>Date limite : <strong>20 Déc 2025</strong></span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Postuler <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Casting 3 -->
+      <div class="col-lg-6" data-animate="fade-up" data-stagger="80" data-parent-index="2">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="casting-header">
+            <div class="casting-type pub">Publicité</div>
+            <div class="casting-urgent">
+              <i class="fas fa-clock"></i> Urgent
+            </div>
+          </div>
+          <div class="casting-body">
+            <h3 class="text-white font-semibold">Figurants pour campagne publicitaire internationale</h3>
+            <p class="text-white/60 text-sm">
+              Grande marque recherche figurants diversifiés pour campagne pan-africaine tournée à Dakar.
+            </p>
+            <div class="casting-details">
+              <div class="detail-item">
+                <i class="fas fa-users"></i>
+                <span><strong>Rôles :</strong> 50 figurants</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>Lieu :</strong> Dakar, Sénégal</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-calendar"></i>
+                <span><strong>Tournage :</strong> 10-12 Déc 2025</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-money-bill-wave"></i>
+                <span><strong>Rémunération :</strong> 150€/jour</span>
+              </div>
+            </div>
+            <div class="casting-tags">
+              <span class="tag">18+ ans</span>
+              <span class="tag">Aucune expérience</span>
+              <span class="tag">Tous profils</span>
+            </div>
+          </div>
+          <div class="casting-footer">
+            <div class="casting-deadline">
+              <i class="fas fa-hourglass-half"></i>
+              <span>Date limite : <strong>8 Déc 2025</strong></span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Postuler <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Casting 4 -->
+      <div class="col-lg-6" data-animate="fade-up" data-stagger="80" data-parent-index="3">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="casting-header">
+            <div class="casting-type film">Film</div>
+          </div>
+          <div class="casting-body">
+            <h3 class="text-white font-semibold">Court-métrage indépendant - Jeunes talents</h3>
+            <p class="text-white/60 text-sm">
+              Réalisateur émergent cherche acteurs pour court-métrage sur la jeunesse africaine contemporaine.
+            </p>
+            <div class="casting-details">
+              <div class="detail-item">
+                <i class="fas fa-users"></i>
+                <span><strong>Rôles :</strong> 4 rôles principaux</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>Lieu :</strong> Abidjan, Côte d'Ivoire</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-calendar"></i>
+                <span><strong>Tournage :</strong> Février 2025</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-money-bill-wave"></i>
+                <span><strong>Rémunération :</strong> Repas fournis</span>
+              </div>
+            </div>
+            <div class="casting-tags">
+              <span class="tag">16-25 ans</span>
+              <span class="tag">Débutants acceptés</span>
+              <span class="tag">Passion</span>
+            </div>
+          </div>
+          <div class="casting-footer">
+            <div class="casting-deadline">
+              <i class="fas fa-hourglass-half"></i>
+              <span>Date limite : <strong>25 Déc 2025</strong></span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Postuler <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bouton Voir Plus -->
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-primary btn-sm rounded-full">
+        <i class="fas fa-plus-circle"></i> Voir tous les castings
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION PROJETS -->
+<section class="projects-section" id="projets">
+  <div class="container">
+    <!-- En-tête -->
+    <div class="text-center mb-5">
+      <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2" data-animate="fade-up">
+        <span class="w-1 h-6 bg-primary rounded-full"></span>
+        Projets en Développement
+      </h2>
+      <div class="section-divider"></div>
+      <p class="text-white/60">
+        Découvrez les projets en cours et collaborez avec des créateurs africains
+      </p>
+    </div>
+
+    <!-- Grille de projets -->
+    <div class="row g-4">
+      
+      <!-- Projet 1 -->
+      <div class="col-lg-4 col-md-6" data-animate="fade-up" data-stagger="80" data-parent-index="0">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="project-image">
+            <img src="assets/images/ceb1.jpg" alt="Projet" loading="lazy" decoding="async">
+            <div class="project-status development">
+              <i class="fas fa-cog"></i> En développement
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-category">
+              <i class="fas fa-film"></i> Long-métrage
+            </div>
+            <h3 class="text-white font-semibold">Les Gardiens du Sahel</h3>
+            <p class="text-white/60 text-sm">
+              Un thriller géopolitique sur la lutte contre le terrorisme au Sahel, raconté du point de vue africain.
+            </p>
+            <div class="project-meta">
+              <div class="meta-item">
+                <i class="fas fa-user"></i>
+                <span>Amadou Konaté</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Burkina Faso</span>
+              </div>
+            </div>
+            <div class="project-needs">
+              <h4>Recherche :</h4>
+              <div class="needs-tags">
+                <span class="need-tag">Producteur</span>
+                <span class="need-tag">Coscénariste</span>
+                <span class="need-tag">Financement</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="col-lg-4 col-md-6" data-animate="fade-up" data-stagger="80" data-parent-index="1">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="project-image">
+            <img src="assets/images/ceb1.jpg" alt="Projet" loading="lazy" decoding="async">
+            <div class="project-status preproduction">
+              <i class="fas fa-video"></i> Pré-production
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-category">
+              <i class="fas fa-tv"></i> Série documentaire
+            </div>
+            <h3 class="text-white font-semibold">Artisans d'Afrique</h3>
+            <p class="text-white/60 text-sm">
+              Série de 8 épisodes explorant les métiers artisanaux traditionnels à travers le continent africain.
+            </p>
+            <div class="project-meta">
+              <div class="meta-item">
+                <i class="fas fa-user"></i>
+                <span>Fatima Diop</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Sénégal</span>
+              </div>
+            </div>
+            <div class="project-needs">
+              <h4>Recherche :</h4>
+              <div class="needs-tags">
+                <span class="need-tag">Chef opérateur</span>
+                <span class="need-tag">Monteur</span>
+                <span class="need-tag">Distributeur</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="col-lg-4 col-md-6" data-animate="fade-up" data-stagger="80" data-parent-index="2">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="project-image">
+            <img src="assets/images/ceb1.jpg" alt="Projet" loading="lazy" decoding="async">
+            <div class="project-status development">
+              <i class="fas fa-cog"></i> En développement
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-category">
+              <i class="fas fa-film"></i> Animation
+            </div>
+            <h3 class="text-white font-semibold">Les Contes de Mama Adjoa</h3>
+            <p class="text-white/60 text-sm">
+              Film d'animation destiné aux enfants, basé sur les contes traditionnels ouest-africains revisités.
+            </p>
+            <div class="project-meta">
+              <div class="meta-item">
+                <i class="fas fa-user"></i>
+                <span>Kwame Asante</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Ghana</span>
+              </div>
+            </div>
+            <div class="project-needs">
+              <h4>Recherche :</h4>
+              <div class="needs-tags">
+                <span class="need-tag">Animateurs 2D</span>
+                <span class="need-tag">Compositeur</span>
+                <span class="need-tag">Voix</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 4 -->
+      <div class="col-lg-4 col-md-6" data-animate="fade-up" data-stagger="80" data-parent-index="3">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="project-image">
+            <img src="assets/images/ceb1.jpg" alt="Projet" loading="lazy" decoding="async">
+            <div class="project-status production">
+              <i class="fas fa-camera"></i> En production
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-category">
+              <i class="fas fa-tv"></i> Série dramatique
+            </div>
+            <h3 class="text-white font-semibold">Lagos Nights</h3>
+            <p class="text-white/60 text-sm">
+              Thriller urbain suivant la vie nocturne de Lagos et ses personnages hauts en couleur.
+            </p>
+            <div class="project-meta">
+              <div class="meta-item">
+                <i class="fas fa-user"></i>
+                <span>Ngozi Okeke</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nigeria</span>
+              </div>
+            </div>
+            <div class="project-needs">
+              <h4>Recherche :</h4>
+              <div class="needs-tags">
+                <span class="need-tag">Assistant réal</span>
+                <span class="need-tag">Script supervisor</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 5 -->
+      <div class="col-lg-4 col-md-6" data-animate="fade-up" data-stagger="80" data-parent-index="4">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="project-image">
+            <img src="assets/images/ceb1.jpg" alt="Projet" loading="lazy" decoding="async">
+            <div class="project-status development">
+              <i class="fas fa-cog"></i> En développement
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-category">
+              <i class="fas fa-film"></i> Documentaire
+            </div>
+            <h3 class="text-white font-semibold">Rythmes d'Afrique</h3>
+            <p class="text-white/60 text-sm">
+              Exploration musicale traversant 10 pays africains pour découvrir les racines des musiques modernes.
+            </p>
+            <div class="project-meta">
+              <div class="meta-item">
+                <i class="fas fa-user"></i>
+                <span>Jean-Pierre Bamba</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>RD Congo</span>
+              </div>
+            </div>
+            <div class="project-needs">
+              <h4>Recherche :</h4>
+              <div class="needs-tags">
+                <span class="need-tag">Ingénieur son</span>
+                <span class="need-tag">Producteur exécutif</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 6 -->
+      <div class="col-lg-4 col-md-6" data-animate="fade-up" data-stagger="80" data-parent-index="5">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="project-image">
+            <img src="assets/images/ceb1.jpg" alt="Projet" loading="lazy" decoding="async">
+            <div class="project-status preproduction">
+              <i class="fas fa-video"></i> Pré-production
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-category">
+              <i class="fas fa-film"></i> Court-métrage
+            </div>
+            <h3 class="text-white font-semibold">Le Poids des Mots</h3>
+            <p class="text-white/60 text-sm">
+              Drame intimiste sur une poétesse kényane confrontée à la censure et à la tradition.
+            </p>
+            <div class="project-meta">
+              <div class="meta-item">
+                <i class="fas fa-user"></i>
+                <span>Amina Hassan</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Kenya</span>
+              </div>
+            </div>
+            <div class="project-needs">
+              <h4>Recherche :</h4>
+              <div class="needs-tags">
+                <span class="need-tag">DOP</span>
+                <span class="need-tag">Actrice principale</span>
+                <span class="need-tag">Décorateur</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bouton Soumettre -->
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-primary btn-sm rounded-full">
+        <i class="fas fa-upload"></i> Soumettre votre projet
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION CONCOURS -->
+<section class="contests-section" id="concours">
+  <div class="container">
+    <!-- En-tête -->
+    <div class="text-center mb-5">
+      <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2" data-animate="fade-up">
+        <span class="w-1 h-6 bg-primary rounded-full"></span>
+        Concours & Appels à Projets
+      </h2>
+      <div class="section-divider"></div>
+      <p class="text-white/60">
+        Participez aux concours et festivals pour faire briller votre talent
+      </p>
+    </div>
+
+    <!-- Timeline des concours -->
+    <div class="contests-timeline">
+      
+      <!-- Concours 1 -->
+      <div class="contest-item" data-animate="fade-up" data-stagger="80" data-parent-index="0">
+        <div class="contest-date">
+          <div class="date-day">15</div>
+          <div class="date-month">Jan</div>
+          <div class="date-year">2025</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="contest-badge winner">
+            <i class="fas fa-trophy"></i> Prix : 50,000€
+          </div>
+          <h3 class="text-white font-semibold">Prix du Meilleur Scénario Africain</h3>
+          <p class="text-white/60 text-sm">
+            Compétition internationale récompensant les meilleurs scénarios de films et séries mettant en valeur les cultures africaines.
+          </p>
+          <div class="contest-details">
+            <div class="detail-row">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Date limite :</strong> 15 Janvier 2025</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-file-alt"></i>
+              <span><strong>Format :</strong> Long-métrage ou série (6-10 épisodes)</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-users"></i>
+              <span><strong>Ouvert à   :</strong> Tous les scénaristes africains ou diaspora</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-award"></i>
+              <span><strong>Récompense :</strong> 50,000€ + Accompagnement production</span>
+            </div>
+          </div>
+          <div class="contest-footer">
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Participer <i class="fas fa-arrow-right"></i>
+            </a>
+            <span class="contest-participants">
+              <i class="fas fa-user-friends"></i> 245 participants
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concours 2 -->
+      <div class="contest-item" data-animate="fade-up" data-stagger="80" data-parent-index="1">
+        <div class="contest-date">
+          <div class="date-day">30</div>
+          <div class="date-month">Jan</div>
+          <div class="date-year">2025</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="contest-badge development">
+            <i class="fas fa-hands-helping"></i> Accompagnement
+          </div>
+          <h3 class="text-white font-semibold">Incubateur de Projets Audiovisuels</h3>
+          <p class="text-white/60 text-sm">
+            Programme d'accompagnement intensif de 6 mois pour développer votre projet de film ou série du pitch au tournage.
+          </p>
+          <div class="contest-details">
+            <div class="detail-row">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Date limite :</strong> 30 Janvier 2025</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-film"></i>
+              <span><strong>Type :</strong> Films, séries, documentaires</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-users"></i>
+              <span><strong>Places :</strong> 15 projets sélectionnés</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-award"></i>
+              <span><strong>Avantages :</strong> Mentorat + Financement + Networking</span>
+            </div>
+          </div>
+          <div class="contest-footer">
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Candidater <i class="fas fa-arrow-right"></i>
+            </a>
+            <span class="contest-participants">
+              <i class="fas fa-user-friends"></i> 128 candidatures
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concours 3 -->
+      <div class="contest-item" data-animate="fade-up" data-stagger="80" data-parent-index="2">
+        <div class="contest-date">
+          <div class="date-day">10</div>
+          <div class="date-month">Fév</div>
+          <div class="date-year">2025</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="contest-badge festival">
+            <i class="fas fa-film"></i> Festival
+          </div>
+          <h3 class="text-white font-semibold">Festival du Court-Métrage Africain</h3>
+          <p class="text-white/60 text-sm">
+            Sélection officielle pour la 12e édition du festival célébrant les courts-métrages africains à travers le monde.
+          </p>
+          <div class="contest-details">
+            <div class="detail-row">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Date limite :</strong> 10 Février 2025</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-clock"></i>
+              <span><strong>Durée :</strong> Courts-métrages de 5 à 30 minutes</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-map-marker-alt"></i>
+              <span><strong>Lieu :</strong> Dakar, Sénégal</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-award"></i>
+              <span><strong>Prix :</strong> 5 catégories + Grand Prix 20,000€</span>
+            </div>
+          </div>
+          <div class="contest-footer">
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Soumettre <i class="fas fa-arrow-right"></i>
+            </a>
+            <span class="contest-participants">
+              <i class="fas fa-user-friends"></i> 387 soumissions
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concours 4 -->
+      <div class="contest-item" data-animate="fade-up" data-stagger="80" data-parent-index="3">
+        <div class="contest-date">
+          <div class="date-day">20</div>
+          <div class="date-month">Fév</div>
+          <div class="date-year">2025</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="contest-badge winner">
+            <i class="fas fa-trophy"></i> Prix : 30,000€
+          </div>
+          <h3 class="text-white font-semibold">Bourse Documentaire Jeunes Réalisateurs</h3>
+          <p class="text-white/60 text-sm">
+            Bourse dédiée aux jeunes réalisateurs africains souhaitant développer un documentaire sur des enjeux sociétaux contemporains.
+          </p>
+          <div class="contest-details">
+            <div class="detail-row">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Date limite :</strong> 20 Février 2025</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-file-video"></i>
+              <span><strong>Format :</strong> Documentaire 52 ou 90 minutes</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-user-clock"></i>
+              <span><strong>âge :</strong> Moins de 35 ans</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-award"></i>
+              <span><strong>Bourse :</strong> 30,000€ + Accompagnement artistique</span>
+            </div>
+          </div>
+          <div class="contest-footer">
+            <a href="#" class="btn btn-primary btn-sm rounded-full">
+              Postuler <i class="fas fa-arrow-right"></i>
+            </a>
+            <span class="contest-participants">
+              <i class="fas fa-user-friends"></i> 92 dossiers
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bouton Voir Plus -->
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-primary btn-sm rounded-full">
+        <i class="fas fa-list"></i> Voir tous les concours
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION SUCCESS STORIES -->
+<section class="success-section" id="success">
+  <div class="container">
+    <!-- En-tête -->
+    <div class="text-center mb-5">
+      <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2" data-animate="fade-up">
+        <span class="w-1 h-6 bg-primary rounded-full"></span>
+        Histoires de Réussite
+      </h2>
+      <div class="section-divider"></div>
+      <p class="text-white/60">
+        Ils ont trouvé leur opportunité grâce à BlackCiné
+      </p>
+    </div>
+
+    <!-- Grille témoignages -->
+    <div class="row g-4">
+      
+      <!-- Témoignage 1 -->
+      <div class="col-lg-4 col-md-6" data-animate="fade-up" data-stagger="80" data-parent-index="0">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="success-image">
+            <img src="assets/images/ceb1.jpg" alt="Success Story" loading="lazy" decoding="async">
+            <div class="success-quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+          </div>
+          <div class="success-content">
+            <p class="text-white/60 text-sm">
+              "Grâce à BlackCiné, j'ai décroché mon premier rôle principal dans un long-métrage. La plateforme m'a permis de me connecter directement avec le réalisateur."
+            </p>
+            <div class="success-author">
+              <h4 class="text-white font-semibold">Aminata Koné</h4>
+              <span>Actrice - Côte d'Ivoire</span>
+              <div class="success-project">
+                <i class="fas fa-film"></i> "Les Enfants de la Lagune"
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Témoignage 2 -->
+      <div class="col-lg-4 col-md-6" data-animate="fade-up" data-stagger="80" data-parent-index="1">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="success-image">
+            <img src="assets/images/ceb1.jpg" alt="Success Story" loading="lazy" decoding="async">
+            <div class="success-quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+          </div>
+          <div class="success-content">
+            <p class="text-white/60 text-sm">
+              "Mon projet de série a trouvé son producteur sur BlackCiné. Aujourd'hui, nous sommes en production et la série sortira sur une plateforme internationale."
+            </p>
+            <div class="success-author">
+              <h4 class="text-white font-semibold">Omar Diabaté</h4>
+              <span>Scénariste & Réalisateur - Mali</span>
+              <div class="success-project">
+                <i class="fas fa-tv"></i> "Les Gardiens du Fleuve"
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Témoignage 3 -->
+      <div class="col-lg-4 col-md-6" data-animate="fade-up" data-stagger="80" data-parent-index="2">
+        <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300">
+          <div class="success-image">
+            <img src="assets/images/ceb1.jpg" alt="Success Story" loading="lazy" decoding="async">
+            <div class="success-quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+          </div>
+          <div class="success-content">
+            <p class="text-white/60 text-sm">
+              "J'ai remporté le concours de scénario via BlackCiné. Ce tremplin m'a permis d'obtenir un financement et de réaliser mon premier film en toute indépendance."
+            </p>
+            <div class="success-author">
+              <h4 class="text-white font-semibold">Fatoumata Sow</h4>
+              <span>Réalisatrice - Sénégal</span>
+              <div class="success-project">
+                <i class="fas fa-trophy"></i> Prix Meilleur Scénario 2024
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION REJOINDRE -->
+<section class="join-section" id="rejoindre">
+  <div class="container">
+      <div class="join-card" data-animate="fade-up">
+      <div class="join-content">
+        <div class="join-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2" data-animate="fade-up">
+          <span class="w-1 h-6 bg-primary rounded-full"></span>
+          Prêt à rejoindre la communauté ?
+        </h2>
+        <p>
+          Inscrivez-vous gratuitement et accédez à des centaines d'opportunités dans l'industrie du cinéma africain.
+        </p>
+        <ul class="join-benefits">
+          <li><i class="fas fa-check-circle"></i> Accès illimité aux castings et projets</li>
+          <li><i class="fas fa-check-circle"></i> Profil professionnel avec portfolio</li>
+          <li><i class="fas fa-check-circle"></i> Notifications personnalisées</li>
+          <li><i class="fas fa-check-circle"></i> Networking avec des professionnels</li>
+          <li><i class="fas fa-check-circle"></i> Participation aux concours exclusifs</li>
+        </ul>
+        <div class="join-actions">
+          <a href="#" class="btn btn-primary btn-sm rounded-full">
+            <i class="fas fa-user-plus"></i> Créer mon compte gratuitement
+          </a>
+          <a href="#" class="btn btn-ghost btn-sm text-white/60 hover:text-white rounded-full">
+            <i class="fas fa-info-circle"></i> En savoir plus
+          </a>
+        </div>
+      </div>
+      <div class="join-stats-grid">
+        <div class="stat-box-join">
+          <div class="stat-icon-join">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-number-join">50,000+</div>
+          <div class="stat-label-join">Membres actifs</div>
+        </div>
+        <div class="stat-box-join">
+          <div class="stat-icon-join">
+            <i class="fas fa-film"></i>
+          </div>
+          <div class="stat-number-join">2,500+</div>
+          <div class="stat-label-join">Projets publiés</div>
+        </div>
+        <div class="stat-box-join">
+          <div class="stat-icon-join">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <div class="stat-number-join">15,000+</div>
+          <div class="stat-label-join">Collaborations</div>
+        </div>
+        <div class="stat-box-join">
+          <div class="stat-icon-join">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="stat-number-join">500+</div>
+          <div class="stat-label-join">Projets financés</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+</main>
+<footer class="footer text-light pt-5 pb-4" style="background-color: #000;">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-start mb-4">
+      <div class="partenaires-section">
+        <h5 class="fw-bold mb-3" data-key="footer_partenaires">Partenaires</h5>
+        <div class="d-flex flex-wrap align-items-center gap-4" id="footerPartners"><!-- Chargé dynamiquement via API --></div>
+        <div class="footer-stats mt-3 text-secondary small" id="footerStats"></div>
+      </div>
+      <div class="newsletter-section text-end">
+        <h5 class="fw-bold mb-3" data-key="footer_newsletter">Newsletter</h5>
+        <form class="d-flex" role="form">
+          <input type="email" class="form-control me-2 bg-dark text-light border-secondary" placeholder="Votre email">
+          <button class="btn btn-danger px-3" data-key="footer_sabonner">S'abonner</button>
+        </form>
+      </div>
+    </div>
+
+    <hr class="border-secondary opacity-50">
+
+    <div class="row text-secondary">
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">À propos</h6>
+        <ul class="list-unstyled small">
+          <li><a href="about.html" class="footer-link" data-key="footer_qui_sommes_nous">Qui sommes-nous</a></li>
+          <li><a href="partenaires.html" class="footer-link">Partenaires</a></li>
+          <li><a href="contact.html" class="footer-link">Publicité</a></li>
+          <li><a href="faq.html" class="footer-link">FAQ</a></li>
+          <li><a href="contact.html" class="footer-link" data-key="footer_contact">Contact</a></li>
+          <li><a href="selections.html" class="footer-link" data-key="menu_selections">Sélections</a></li>
+          <li><a href="festivals.html" class="footer-link" data-key="menu_festivals">Festivals</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Films</h6>
+        <ul class="list-unstyled small">
+          <li><a href="films.html?sort=recent" class="footer-link">Nouveautés</a></li>
+          <li><a href="films.html" class="footer-link">À l'Affiche</a></li>
+          <li><a href="films.html?sort=rating" class="footer-link">Box-office</a></li>
+          <li><a href="films.html?filter=classics" class="footer-link">Classiques</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Séries</h6>
+        <ul class="list-unstyled small">
+          <li><a href="series.html?sort=recent" class="footer-link">Nouveautés</a></li>
+          <li><a href="series.html?filter=ongoing" class="footer-link">En cours</a></li>
+          <li><a href="series.html" class="footer-link">Par genre</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Émissions</h6>
+        <ul class="list-unstyled small">
+          <li><a href="emissions.html?category=interview" class="footer-link">Interviews</a></li>
+          <li><a href="emissions.html?category=talkshow" class="footer-link">Talk-shows</a></li>
+          <li><a href="emissions.html?category=podcast" class="footer-link">Podcasts</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Communauté</h6>
+        <ul class="list-unstyled small">
+          <li><a href="communaute.html#casting" class="footer-link">Casting</a></li>
+          <li><a href="communaute.html#projets" class="footer-link">Projets</a></li>
+          <li><a href="communaute.html#concours" class="footer-link">Concours</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-secondary opacity-50 mt-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-secondary small">
+      <p class="mb-2 mb-md-0" data-key="footer_copyright">© 2026 BlackCiné. Tous droits réservés.</p>
+      <div class="d-flex flex-wrap justify-content-center">
+        <a href="confidentialite.html" class="footer-link me-2">Confidentialité</a> |
+        <a href="mentions-legales.html" class="footer-link mx-2">Mentions légales</a> |
+        <a href="cgu.html" class="footer-link mx-2">CGU</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="assets/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/sanitize.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/communaute.js"></script>
+<script src="assets/js/footer.js"></script>
+<script src="assets/js/favorites.js"></script>
+<script src="assets/js/sharing.js"></script>
+<script src="assets/js/modern-ui.js"></script>
+<script src="assets/js/page-transitions.js"></script>
+<script src="assets/js/form-animations.js"></script>
+<script src="assets/js/accessibility.js"></script>
+<script src="assets/js/mobile-interactions.js"></script>
+<script src="assets/js/performance.js"></script>
+<script src="assets/js/skeletons.js"></script>
+
+</body>
+</html>

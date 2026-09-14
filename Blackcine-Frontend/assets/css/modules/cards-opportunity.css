@@ -1,0 +1,55 @@
+﻿/* ============================================
+   OPPORTUNITY CARDS
+   ============================================ */
+.opportunity-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.opportunity-image img {
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.opportunity-card:hover img {
+  transform: scale(1.04);
+}
+
+.opportunity-card .p-4 {
+  padding: 1.2rem !important;
+}
+
+.opportunity-card h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.opportunity-card p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+
+.btn-dark {
+  background-color: #000;
+  border: none;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: #E50914;
+}
+
+.btn-outline-dark {
+  border-radius: 20px;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+}

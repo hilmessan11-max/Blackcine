@@ -1,0 +1,114 @@
+﻿/* === PROCHAINES DIFFUSIONS === */
+.upcoming-emissions {
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.upcoming-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  border: 1px solid #e8e8e8;
+}
+
+.timeline-item:hover {
+  border-left-color: var(--primary-red);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.time-block {
+  min-width: 80px;
+  text-align: center;
+  padding-right: 20px;
+  border-right: 1px solid var(--border-light);
+}
+
+.time-block .day {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.time-block .hour {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.emission-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.emission-info img {
+  width: 70px;
+  height: 45px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.emission-info .details {
+  flex: 1;
+}
+
+.badge-live {
+  display: inline-block;
+  background: var(--primary-red);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.emission-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 3px;
+}
+
+.emission-info p {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.btn-reminder {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid var(--border-light);
+  background: white;
+  color: var(--text-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-reminder:hover {
+  background: var(--primary-red);
+  border-color: var(--primary-red);
+  color: white;
+}
+

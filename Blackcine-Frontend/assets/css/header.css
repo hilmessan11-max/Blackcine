@@ -1,0 +1,294 @@
+/* ============================================
+   HEADER STYLES
+   Header, navigation, logo, auth buttons,
+   search bar, mobile menu, dropdown menu.
+   ============================================ */
+
+/* === HEADER === */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: transparent;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    margin-left: 10%;
+}
+
+/* === NAVIGATION === */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size:13px;
+}
+
+.nav-menu a:hover {
+    color: #FF2D38;
+}
+
+/* === AUTH BUTTONS === */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 10%;
+}
+
+.btn-login {
+    color: white;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.btn-register {
+    background-color: #FF2D38;
+    color: white;
+    font-size: 0.9rem;
+    padding: 6px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-register:hover {
+    background-color: #E50914;
+}
+
+/* === SEARCH BAR === */
+.search-bar {
+    padding: 10px 40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 50;
+}
+
+.search-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    overflow: hidden;
+}
+
+.search-container select {
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    width: 120px;
+    outline: none;
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: white;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-container button {
+    border: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    padding: 0 15px;
+}
+
+.search-container-header input {
+    background: transparent !important;
+    color: white !important;
+}
+
+.search-container-header input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.search-container select option {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+/* === MENU MOBILE === */
+.mobile-menu-toggle {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 80px;
+  left: -100%;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+
+.mobile-menu.show {
+  left: 0;
+}
+
+.mobile-menu-content {
+  padding: 30px 20px;
+}
+
+.mobile-nav-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: block;
+  padding: 15px 0;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  color: #FF2D38;
+}
+
+/* === DROPDOWN MENU === */
+.nav-item {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    display: none;
+    flex-direction: column;
+    min-width: 180px;
+    border-radius: 0;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+.nav-item:hover > .dropdown-menu {
+    display: flex;
+}
+
+/* === HEADER SCROLLED === */
+header.scrolled {
+  background-color: #000 !important;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease;
+}
+
+header.scrolled .search-bar {
+  display: none;
+}
+
+header.scrolled .search-scrolled {
+  display: block !important;
+  position: static;
+  width: auto;
+  padding: 0;
+  background: none;
+  backdrop-filter: none;
+  z-index: auto;
+  margin-right: 20px;
+}
+
+header.scrolled .search-scrolled .search-container {
+  max-width: 400px;
+  margin: 0;
+}
+
+.search-scrolled {
+  display: none;
+}
+
+header.scrolled .header-top {
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 40px;
+}
+
+/* === FOOTER SECTIONS (header area) === */
+.partenaires-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.newsletter-section {
+  flex: 1;
+  min-width: 180px;
+}
+
+.newsletter-section form {
+  justify-content: flex-end;
+}
+
+.newsletter-section input.form-control {
+  width: 200px;
+  padding: 10px 10px;
+  font-size: 0.85rem;
+}
+
+.btn-lang {
+  background: none;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-lang:hover {
+  color: #E50914;
+}

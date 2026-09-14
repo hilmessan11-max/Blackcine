@@ -1,0 +1,17 @@
+/* ============================================
+   CARDS - Module manifest
+   Movie cards, article cards, trailer cards,
+   selection cards, festival cards, winner cards,
+   news cards, opportunity cards, classic cards,
+   director cards, partner cards.
+   ============================================ */
+@import url('modules/cards-article.css');
+@import url('modules/cards-trailer.css');
+@import url('modules/cards-topfilms.css');
+@import url('modules/cards-ticket.css');
+@import url('modules/cards-selection.css');
+@import url('modules/cards-festival.css');
+@import url('modules/cards-opportunity.css');
+@import url('modules/cards-classic.css');
+@import url('modules/cards-director.css');
+@import url('modules/cards-partner.css');

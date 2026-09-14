@@ -1,0 +1,42 @@
+﻿/* ============================================
+   SECTION HEADERS & DIVIDERS
+   ============================================ */
+.articles-section {
+  background: #ffffff;
+}
+
+/* En-tête uniforme */
+.articles-section .text-center h3,
+.trailers-section h3,
+.top-films-section h3,
+.ticket-section h2,
+.latest-movie-section h3,
+.arte-section h3,
+.opportunities-section h3,
+.classics-section h3,
+.partners-section h3,
+.prospace-section h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.articles-section .section-divider,
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background: #E50914;
+  margin: 10px auto 15px;
+}
+
+.articles-section .text-dark {
+  font-size: 0.95rem;
+  color: #888888 !important;
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+}
+

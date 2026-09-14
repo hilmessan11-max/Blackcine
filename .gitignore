@@ -30,3 +30,11 @@ build/
 # Cache
 .cache/
 *.cache
+
+# Backend (ex-submodule Laravel)
+Blackcine-Backend/vendor/
+Blackcine-Backend/.phpunit.result.cache
+Blackcine-Backend/.phpunit.cache/
+
+# Frontend (ex-submodule, fichier genere non versionne)
+Blackcine-Frontend/assets/css/tailwind.css

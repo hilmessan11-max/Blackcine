@@ -1,0 +1,33 @@
+﻿.actualites-section {
+    padding-top: 30px;
+    margin-top: 7%;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    background-color: #f8f9fa;
+    padding-bottom: 60px;
+}
+
+/* === SIDEBAR GAUCHE === */
+.sidebar {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.genres-list li {
+    margin-bottom: 6px;
+}
+
+.genres-list li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.genres-list li a:hover,
+.genres-list li a.active {
+    color: red;
+}
+
+/* === ARTICLES POPULAIRES === */

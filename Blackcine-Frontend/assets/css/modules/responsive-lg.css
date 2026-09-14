@@ -1,0 +1,280 @@
+﻿/* ============================================
+   992px BREAKPOINT
+   ============================================ */
+
+@media (max-width: 992px) {
+  /* --- Hero --- */
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 0;
+    gap: 30px;
+  }
+  
+  .hero-left {
+    max-width: 100%;
+    order: 2;
+  }
+  
+  .hero-right {
+    order: 1;
+    margin-left: 0;
+  }
+  
+  .hero-right img {
+    width: 250px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* --- Trailers --- */
+  .featured-title {
+    font-size: 1.2rem;
+  }
+
+  .featured-desc {
+    font-size: 0.8rem;
+  }
+
+  .featured-info {
+    padding: 16px;
+  }
+
+  .trailers-grid {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 12px;
+  }
+
+  .trailer-card-small {
+    min-width: 300px;
+    flex-direction: column;
+  }
+
+  .trailer-thumb {
+    width: 100%;
+    height: 170px;
+  }
+
+  .trailer-info-sm {
+    padding: 12px;
+  }
+
+  .carousel-item-card {
+    min-width: 220px;
+  }
+
+  /* --- Top Films --- */
+  .top-poster img {
+    height: 300px;
+  }
+
+  .top-title {
+    font-size: 0.9rem;
+  }
+
+  .btn-play-top {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .btn-quick-action {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .top-rank {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  /* --- Tickets --- */
+  .ticket-poster-section {
+    width: 180px;
+  }
+
+  .ticket-details-section {
+    padding: 20px;
+  }
+
+  .ticket-movie-title {
+    font-size: 1.3rem;
+  }
+
+  .ticket-description {
+    font-size: 0.85rem;
+  }
+
+  .ticket-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .ticket-carousel-control.prev {
+    left: -15px;
+  }
+
+  .ticket-carousel-control.next {
+    right: -15px;
+  }
+
+  /* --- Selection --- */
+  .selection-poster img {
+    height: 240px;
+  }
+
+  .selection-title {
+    font-size: 0.85rem;
+  }
+
+  .selection-year {
+    font-size: 0.7rem;
+  }
+
+  .btn-play-poster {
+    width: 45px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .badge-new {
+    font-size: 0.6rem;
+    padding: 3px 8px;
+  }
+
+  .rating-badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  /* --- Festivals --- */
+  .festival-image-wrapper {
+    min-height: 350px;
+  }
+
+  .festival-content {
+    padding: 30px;
+  }
+
+  .festival-title {
+    font-size: 1.8rem;
+  }
+
+  .festival-subtitle {
+    font-size: 1rem;
+  }
+
+  .festival-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .winner-poster img {
+    height: 240px;
+  }
+
+  .news-image {
+    height: 160px;
+  }
+
+  /* --- Heritage --- */
+  .classic-poster img {
+    height: 260px;
+  }
+
+  .director-photo-wrapper {
+    min-height: 180px;
+  }
+
+  /* --- Partners --- */
+  .partners-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+    margin-bottom: 45px;
+  }
+
+  .partner-logo-wrapper {
+    height: 100px;
+    padding: 18px 12px;
+  }
+
+  .partner-logo {
+    max-height: 50px;
+  }
+
+  .partnership-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 25px 20px;
+    margin-bottom: 45px;
+  }
+
+  .stat-box {
+    padding: 14px;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stat-icon i {
+    font-size: 1.05rem;
+  }
+
+  .stat-number {
+    font-size: 1.4rem;
+  }
+
+  /* --- Opportunities --- */
+  .opportunity-image img {
+    height: 160px;
+  }
+
+  .opportunity-card .p-4 {
+    padding: 1rem !important;
+  }
+
+  .opportunity-card h5 {
+    font-size: 1rem;
+  }
+
+  /* --- Global --- */
+  :root {
+    --section-padding-y: 60px;
+    --section-padding-x: 15px;
+  }
+
+  /* --- Header --- */
+  .nav-menu {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: block !important;
+  }
+  
+  .header-top {
+    padding: 0 20px;
+  }
+  
+  .search-bar {
+    padding: 8px 20px;
+  }
+  
+  .search-container select {
+    width: 100px;
+  }
+}
+

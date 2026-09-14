@@ -1,6 +1,0 @@
-[submodule "Blackcine-Frontend"]
-	path = Blackcine-Frontend
-	url = https://github.com/Yug-Su/Blackcine_Frontend.git
-[submodule "Blackcine-Backend"]
-	path = Blackcine-Backend
-	url = https://github.com/Yug-Su/Blackcine_Backend.git

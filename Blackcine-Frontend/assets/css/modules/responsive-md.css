@@ -1,0 +1,705 @@
+﻿/* ============================================
+   768px BREAKPOINT
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* --- Global --- */
+  :root {
+    --section-padding-y: 50px;
+    --section-padding-x: 15px;
+    --section-title-mb: 30px;
+  }
+  
+  header {
+    height: 60px;
+  }
+  
+  .header-top {
+    padding: 0 15px;
+    justify-content: space-between;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+  }
+  
+  .logo {
+    margin-left: 0 !important;
+  }
+  
+  .logo img {
+    width: 130px !important;
+  }
+  
+  .nav-menu {
+    display: none;
+  }
+  
+  .auth-buttons {
+    margin-right: 0 !important;
+    gap: 10px;
+  }
+  
+  /* --- Mobile Menu --- */
+  .mobile-menu {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    display: block;
+  }
+  
+  .mobile-menu.show {
+    left: 0;
+  }
+  
+  .mobile-menu-content {
+    padding: 20px;
+  }
+  
+  .mobile-nav-item {
+    margin-bottom: 15px;
+  }
+  
+  .mobile-nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-nav-link:hover {
+    color: #FF2D38;
+  }
+  
+  /* --- Mobile Menu Toggle --- */
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem !important;
+    cursor: pointer;
+    padding: 8px !important;
+  }
+  
+  /* --- Search --- */
+  .search-bar {
+    padding: 6px 15px;
+    flex-basis: 100% !important;
+    width: 100% !important;
+    order: 3 !important;
+  }
+  
+  .search-container {
+    max-width: 100%;
+    height: 50px !important;
+  }
+  
+  .search-container select {
+    width: 80px;
+    font-size: 1rem !important;
+    padding: 12px 15px !important;
+  }
+  
+  .search-container input {
+    font-size: 1rem !important;
+    padding: 12px 18px !important;
+  }
+  
+  .search-container button {
+    font-size: 1.2rem !important;
+    padding: 0 18px !important;
+  }
+  
+  /* --- Hero --- */
+  .hero-container {
+    padding: 200px 15px 0 !important;
+    gap: 25px;
+  }
+  
+  .hero-right img {
+    width: 300px !important;
+  }
+  
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-title span {
+    font-size: 1.2rem;
+  }
+  
+  .hero-actions {
+    gap: 10px;
+  }
+  
+  .hero-actions span {
+    font-size: 0.8rem;
+  }
+  
+  .btn-circle {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .movie-info {
+    font-size: 0.8rem;
+  }
+  
+  /* --- Trailers --- */
+  .trailers-tabs {
+    flex-wrap: wrap;
+    border-radius: 12px;
+  }
+
+  .trailer-tab {
+    padding: 7px 16px;
+    font-size: 0.8rem;
+  }
+
+  .featured-info {
+    padding: 14px;
+  }
+
+  .featured-title {
+    font-size: 1.1rem;
+  }
+
+  .featured-actions {
+    width: 100%;
+  }
+
+  .btn-watch {
+    flex: 1;
+    justify-content: center;
+    font-size: 0.8rem;
+    padding: 9px 20px;
+  }
+
+  .btn-icon-action {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+
+  .section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .section-subtitle-sm {
+    font-size: 1.1rem;
+  }
+
+  .trailers-carousel {
+    padding: 0 12px;
+  }
+
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .carousel-item-card {
+    min-width: 200px;
+  }
+
+  /* --- Top Films --- */
+  .top-filters-wrapper {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .top-filter-btn {
+    padding: 7px 16px;
+    font-size: 0.8rem;
+  }
+
+  .top-poster img {
+    height: 280px;
+  }
+
+  .top-info {
+    padding: 10px 0 0;
+  }
+
+  .top-title {
+    font-size: 0.85rem;
+  }
+
+  .top-rating {
+    font-size: 0.8rem;
+  }
+
+  .top-year {
+    font-size: 0.7rem;
+  }
+
+  .genre-tag {
+    font-size: 0.65rem;
+    padding: 2px 8px;
+  }
+
+  .btn-see-ranking {
+    font-size: 0.85rem;
+    padding: 10px 28px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* --- Tickets --- */
+  .ticket-filters-wrapper {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .ticket-filter-btn {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+  }
+
+  .ticket-movie-card {
+    flex-direction: column;
+  }
+
+  .ticket-poster-section {
+    width: 100%;
+    height: 280px;
+  }
+
+  .ticket-details-section {
+    padding: 18px;
+  }
+
+  .ticket-movie-title {
+    font-size: 1.2rem;
+  }
+
+  .ticket-info-item {
+    padding: 10px;
+  }
+
+  .ticket-info-label {
+    font-size: 0.65rem;
+  }
+
+  .ticket-info-value {
+    font-size: 0.85rem;
+  }
+
+  .btn-reserve-ticket {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .btn-ticket-action {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+  }
+
+  .ticket-carousel-control {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .ticket-carousel-control.prev {
+    left: 5px;
+  }
+
+  .ticket-carousel-control.next {
+    right: 5px;
+  }
+
+  .btn-all-sessions {
+    font-size: 0.85rem;
+    padding: 10px 28px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* --- Selection --- */
+  .selection-poster img {
+    height: 220px;
+  }
+
+  .selection-info {
+    padding: 10px 0 0;
+  }
+
+  .selection-title {
+    font-size: 0.8rem;
+  }
+
+  .btn-discover-selection {
+    font-size: 0.85rem;
+    padding: 10px 28px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* --- Festivals --- */
+  .festival-image-wrapper {
+    min-height: 300px;
+  }
+
+  .festival-content {
+    padding: 25px;
+  }
+
+  .festival-title {
+    font-size: 1.6rem;
+  }
+
+  .festival-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .festival-description {
+    font-size: 0.9rem;
+  }
+
+  .festival-stats {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .stat-item i {
+    font-size: 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 1rem;
+  }
+
+  .festival-actions {
+    width: 100%;
+  }
+
+  .btn-festival-primary {
+    flex: 1;
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+
+  .btn-festival-secondary {
+    font-size: 0.85rem;
+  }
+
+  .section-header-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .section-subtitle-inline {
+    font-size: 1.2rem;
+  }
+
+  .winner-poster img {
+    height: 220px;
+  }
+
+  .news-image {
+    height: 150px;
+  }
+
+  .news-content {
+    padding: 16px;
+  }
+
+  .news-title {
+    font-size: 0.95rem;
+  }
+
+  .btn-follow-festival {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  /* --- Heritage --- */
+  .classic-poster img {
+    height: 240px;
+  }
+
+  .director-photo-wrapper {
+    min-height: 160px;
+  }
+
+  .director-content {
+    padding: 16px;
+  }
+
+  .director-name {
+    font-size: 1.1rem;
+  }
+
+  .btn-explore-cinematheque {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  /* --- Partners --- */
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+
+  .partner-logo-wrapper {
+    height: 95px;
+    padding: 16px 10px;
+  }
+
+  .partner-logo {
+    max-height: 48px;
+  }
+
+  .partner-name {
+    font-size: 0.85rem;
+  }
+
+  .partner-role {
+    font-size: 0.65rem;
+  }
+
+  .partnership-stats {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 22px 18px;
+    margin-bottom: 40px;
+  }
+
+  .stat-box {
+    padding: 13px;
+  }
+
+  .stat-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .stat-icon i {
+    font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.68rem;
+  }
+
+  .btn-all-partners {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.85rem;
+    padding: 11px 28px;
+  }
+
+  /* --- Opportunities --- */
+  .opportunity-image img {
+    height: 150px;
+  }
+
+  .opportunity-card p {
+    font-size: 0.8rem;
+  }
+
+  .opportunity-card .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  /* --- Articles --- */
+  .article-img-container {
+    height: 160px;
+  }
+  
+  .article-card-content {
+    padding: 15px;
+  }
+  
+  .article-title {
+    font-size: 0.95rem;
+  }
+  
+  .article-text {
+    font-size: 0.8rem;
+  }
+
+  /* --- Header Scrolled --- */
+  header.scrolled {
+    height: auto !important;
+    padding: 0 !important;
+  }
+  
+  header.scrolled .search-scrolled {
+    display: block !important;
+    position: fixed !important;
+    top: 60px !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 999 !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 10px 15px !important;
+  }
+  
+  header.scrolled .search-bar {
+    display: none !important;
+  }
+  
+  header.scrolled .header-top {
+    padding: 10px 15px !important;
+    min-height: 60px !important;
+    align-items: center !important;
+  }
+  
+  header.scrolled .logo {
+    margin-left: 0;
+  }
+  
+  header.scrolled .auth-buttons {
+    margin-right: 0;
+  }
+
+  /* --- Sections mobiles --- */
+  .articles-section .text-center h3,
+  .trailers-section h3,
+  .top-films-section h3,
+  .ticket-section h2,
+  .latest-movie-section h3,
+  .opportunities-section h3,
+  .heritage-section h3,
+  .partners-section h3,
+  .prospace-section h3 {
+    font-size: 1.5rem;
+  }
+  
+  .articles-section .text-dark {
+    font-size: 0.9rem;
+  }
+
+  /* --- Footer mobile --- */
+  .partenaires-section, 
+  .newsletter-section {
+    flex: 100%;
+    text-align: center;
+  }
+  
+  .newsletter-section {
+    margin-top: 20px;
+  }
+  
+  .newsletter-section form {
+    justify-content: center;
+  }
+  
+  .newsletter-section input.form-control {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* --- Films Page --- */
+  .sidebar {
+    display: none;
+  }
+  
+  .movies-section {
+    padding-top: 100px;
+  }
+  
+  .btn-toggle-filters {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #495057;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .filters-collapse {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .filters-collapse.show {
+    display: flex;
+  }
+  
+  .quick-filters-wrapper {
+    display: flex !important;
+    gap: 10px !important;
+    align-items: center !important;
+  }
+  
+  .filter-search-box {
+    flex: 1 !important;
+  }
+  
+  .filter-search-box,
+  .filter-select {
+    min-width: 150px;
+  }
+
+  /* --- Films Page Touch --- */
+  .movie-card::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .movie-card::before {
+    opacity: 0.7;
+  }
+
+  /* --- Buttons Global --- */
+  .btn-outline-dark {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  /* --- Prospace --- */
+  .prospace-image img {
+    height: 220px;
+  }
+  
+  .prospace-content {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .prospace-content .d-flex {
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .prospace-content .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+

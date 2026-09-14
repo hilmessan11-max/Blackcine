@@ -1,0 +1,21 @@
+﻿/* ============================================
+   BlackCine Tailwind CSS - Comprehensive Build
+   Generated from project-wide class audit
+   ============================================ */
+
+:root {
+  --color-primary: #E50914;
+  --color-secondary: #141414;
+  --color-accent: #FF6B6B;
+  --color-gold: #FFD700;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-dark: #1a1a2e;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-success: #28a745;
+  --color-info: #17a2b8;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+

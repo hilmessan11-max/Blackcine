@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackCiné - Actualités</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+<!-- SEO Meta Tags -->
+<meta name="description" content="Actualités du cinéma africain - Festivals, sorties, événements">
+<meta name="keywords" content="cinéma africain, films, séries, actualités, BlackCiné">
+<meta name="author" content="BlackCiné">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blackcine.com/actualites.html">
+<meta property="og:title" content="Actualités - BlackCiné">
+<meta property="og:description" content="Actualités du cinéma africain - Festivals, sorties, événements">
+<meta property="og:image" content="/assets/images/og-default.jpg">
+<meta property="og:site_name" content="BlackCiné">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Actualités - BlackCiné">
+<meta name="twitter:description" content="Actualités du cinéma africain - Festivals, sorties, événements">
+<meta name="twitter:image" content="/assets/images/og-default.jpg">
+  <!-- BOOTSTRAP (local) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="assets/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+
+  <!-- BOOTSTRAP ICONS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- FONTAWESOME (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- CSS PERSONNALISÉ -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/actualites.css">
+  <link rel="stylesheet" href="assets/css/design-system.css">
+<link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+<body>
+<!-- Skip Navigation -->
+<a href="#main-content" class="sr-only sr-only-focusable">Aller au contenu principal</a>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <a href="index.html" class="logo"><img src="assets/images/log3.png" alt="BlackCiné - Logo" width="120" data-key="logo_alt"></a>
+
+    <nav class="nav-menu" aria-label="Menu principal">
+      <div class="nav-item dropdown">
+        <a href="films.html" class="nav-link" aria-expanded="false" data-key="menu_films">FILMS <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="films_nouveautes">Nouveautés</a>
+          <a href="#" data-key="films_affiche">À l'Affiche</a>
+          <a href="#" data-key="films_avvenir">À venir</a>
+          <a href="#" data-key="films_pays">Par pays</a>
+          <a href="#" data-key="films_langue">Par langue</a>
+          <a href="#" data-key="films_boxoffice">Box-office</a>
+          <a href="#" data-key="films_courts">Courts-métrages & Webfilms</a>
+          <a href="#" data-key="films_classiques">Classiques africains</a>
+          <a href="#" data-key="films_tous">Tous les films</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="series.html" class="nav-link" aria-expanded="false" data-key="menu_series">SÉRIES <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="series_nouveautes">Nouveautés</a>
+          <a href="#" data-key="series_en_cours">En cours</a>
+          <a href="#" data-key="series_avvenir">À venir</a>
+          <a href="#" data-key="series_pays">Par pays</a>
+          <a href="#" data-key="series_genre">Par genre</a>
+          <a href="#" data-key="series_webmini">Webséries & Mini-séries</a>
+          <a href="#" data-key="series_cultes">Séries cultes africaines</a>
+          <a href="#" data-key="series_toutes">Toutes les séries</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="emissions.html" class="nav-link" aria-expanded="false" data-key="menu_emissions">ÉMISSIONS <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="emissions_interviews">Interviews</a>
+          <a href="#" data-key="emissions_talkshows">Talk-shows</a>
+          <a href="#" data-key="emissions_chroniques">Chroniques</a>
+          <a href="#" data-key="emissions_makingof">Making-of</a>
+          <a href="#" data-key="emissions_podcasts">Podcasts</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="actualites.html" class="nav-link active" aria-expanded="false" data-key="menu_actualites">ACTUALITÉS <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="actualites_news">News</a>
+          <a href="#" data-key="actualites_interviews">Interviews</a>
+          <a href="#" data-key="actualites_critiques">Critiques</a>
+          <a href="#" data-key="actualites_festivals">Festivals & événements</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="communaute.html" class="nav-link" aria-expanded="false" data-key="menu_communaute">COMMUNAUTÉ <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="#" data-key="communaute_casting">Casting</a>
+          <a href="#" data-key="communaute_projets">Projets</a>
+          <a href="#" data-key="communaute_concours">Concours</a>
+          <a href="#" data-key="communaute_rejoindre">Rejoindre la Communauté</a>
+        </div>
+      </div>
+    
+
+      <div class="nav-item">
+        <a href="selections.html" class="nav-link" data-key="menu_selections">SÉLECTIONS</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="festivals.html" class="nav-link" data-key="menu_festivals">FESTIVALS</a>
+      </div>
+    </nav>
+
+      <!-- Bouton menu mobile -->
+      <button class="mobile-menu-toggle d-md-none btn btn-ghost btn-circle text-white" id="mobileMenuToggle" aria-label="Ouvrir le menu mobile">
+        <i class="fas fa-bars text-lg"></i>
+      </button>
+    <div class="auth-buttons">
+      <button class="btn btn-ghost btn-sm text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200" id="lang-toggle" data-key="btn_lang">
+        Français<i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <a href="#" class="btn btn-primary btn-sm rounded-full px-5 py-2 text-white font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all duration-200" data-bs-toggle="modal" data-bs-target="#signupModal" data-key="btn_register">S'INSCRIRE</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-content">
+    <div class="mobile-nav-item">
+      <a href="films.html" class="mobile-nav-link" data-key="menu_films">FILMS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="series.html" class="mobile-nav-link" data-key="menu_series">SÉRIES</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="emissions.html" class="mobile-nav-link" data-key="menu_emissions">ÉMISSIONS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="actualites.html" class="mobile-nav-link" data-key="menu_actualites">ACTUALITÉS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="communaute.html" class="mobile-nav-link" data-key="menu_communaute">COMMUNAUTÉ</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="selections.html" class="mobile-nav-link" data-key="menu_selections">SÉLECTIONS</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="festivals.html" class="mobile-nav-link" data-key="menu_festivals">FESTIVALS</a>
+    </div>
+  </div>
+</div>
+
+<main id="main-content" class="flex-1">
+<!-- SECTION ACTUALITÉS -->
+<section class="actualites-section">
+  <div class="container">
+    <div class="row">
+      
+      <!-- ==== COLONNE GAUCHE : FILTRES ==== -->
+      <div class="col-lg-3 col-md-4 mb-4">
+        <div class="sidebar bg-white text-dark p-4 rounded-4" data-animate="fade-up">
+          
+          <!-- CATÉGORIES -->
+          <h5 class="text-xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-1 h-6 bg-primary rounded-full"></span>Catégories</h5>
+          <ul class="list-unstyled genres-list mb-5">
+            <li><a href="#" class="active bg-primary text-white border border-primary rounded-full" data-category="">Toutes les actualités</a></li>
+            <li><a href="#" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10" data-category="News">News</a></li>
+            <li><a href="#" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10" data-category="Interviews">Interviews</a></li>
+            <li><a href="#" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10" data-category="Critiques">Critiques</a></li>
+            <li><a href="#" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10" data-category="Festivals & événements">Festivals & événements</a></li>
+            <li><a href="#" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10" data-category="Box-office">Box-office</a></li>
+            <li><a href="#" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10" data-category="Sorties">Sorties</a></li>
+            <li><a href="#" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10" data-category="Coulisses">Coulisses</a></li>
+            <li><a href="#" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10" data-category="Portraits">Portraits</a></li>
+            <li><a href="#" class="bg-white/5 text-white/60 border border-white/10 rounded-full hover:bg-white/10" data-category="Récompenses">Récompenses</a></li>
+          </ul>
+
+          <!-- ARTICLES POPULAIRES -->
+          <h5 class="text-xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-1 h-6 bg-primary rounded-full"></span>Articles Populaires</h5>
+          <div class="popular-articles">
+            <div class="popular-item">
+              <img src="assets/images/image191.jpg" alt="Article 1" loading="lazy" decoding="async">
+              <div class="popular-info">
+                <span class="popular-title">FESPACO 2025 : Les films en compétition</span>
+                <span class="popular-date">Il y a 2 jours</span>
+              </div>
+            </div>
+            <div class="popular-item">
+              <img src="assets/images/image181.jpg" alt="Article 2" loading="lazy" decoding="async">
+              <div class="popular-info">
+                <span class="popular-title">Interview : Ladj Ly revient sur son parcours</span>
+                <span class="popular-date">Il y a 3 jours</span>
+              </div>
+            </div>
+            <div class="popular-item">
+              <img src="assets/images/image171.jpg" alt="Article 3" loading="lazy" decoding="async">
+              <div class="popular-info">
+                <span class="popular-title">Top 10 des films africains de 2024</span>
+                <span class="popular-date">Il y a 5 jours</span>
+              </div>
+            </div>
+            <div class="popular-item">
+              <img src="assets/images/blogv29.jpg" alt="Article 4" loading="lazy" decoding="async">
+              <div class="popular-info">
+                <span class="popular-title">Netflix mise sur le cinéma africain</span>
+                <span class="popular-date">Il y a 1 semaine</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAGS -->
+          <h5 class="text-xl font-bold text-white mb-4 flex items-center gap-2 mt-5"><span class="w-1 h-6 bg-primary rounded-full"></span>Tags</h5>
+          <div class="tags-cloud">
+            <span class="tag-item">Nollywood</span>
+            <span class="tag-item">FESPACO</span>
+            <span class="tag-item">Netflix</span>
+            <span class="tag-item">Cannes</span>
+            <span class="tag-item">Documentaire</span>
+            <span class="tag-item">Sénégal</span>
+            <span class="tag-item">Nigeria</span>
+            <span class="tag-item">Afrique du Sud</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==== COLONNE DROITE : ARTICLES ==== -->
+      <div class="col-lg-9 col-md-8 bg-white">
+        
+        <!-- ARTICLE ? LA UNE -->
+        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2" data-animate="fade-up"><span class="w-1 h-6 bg-primary rounded-full"></span>À la Une</h3>
+        
+        <div class="featured-article mb-5" data-animate="fade-up">
+          <div class="featured-image">
+            <img src="assets/images/image191.jpg" alt="Article à la une" loading="lazy" decoding="async">
+            <span class="featured-badge">Exclusif</span>
+            <div class="featured-overlay">
+              <span class="featured-category">Festival</span>
+              <h2 class="featured-title">FESPACO 2025 : Une édition historique pour le cinéma africain</h2>
+              <p class="featured-excerpt">Le Festival panafricain du cinéma et de la télévision de Ouagadougou célèbre sa 28e édition avec une programmation exceptionnelle mettant en lumière les nouveaux talents du continent.</p>
+              <div class="featured-meta">
+                <span><i class="bi bi-person"></i> Par Aminata Diallo</span>
+                <span><i class="bi bi-calendar"></i> 20 Nov 2025</span>
+                <span><i class="bi bi-clock"></i> 8 min de lecture</span>
+              </div>
+              <a href="#" class="btn-read-more">Lire l'article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- GRILLE D'ARTICLES -->
+        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2" data-animate="fade-up"><span class="w-1 h-6 bg-primary rounded-full"></span>Dernières Actualités</h3>
+        
+        <div class="row g-4">
+          
+          <!-- ARTICLE 1 -->
+          <div class="col-article" data-animate="fade-up" data-stagger="80" data-parent-index="0">
+            <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300 position-relative">
+              <span class="article-badge news">News</span>
+              <div class="article-image">
+                <img src="assets/images/ceb1.jpg" alt="Article" loading="lazy" decoding="async">
+              </div>
+              <div class="article-content">
+                <span class="article-date"><i class="bi bi-calendar"></i> 19 Nov 2025</span>
+                <h6 class="text-white font-semibold">Nollywood bat un nouveau record au box-office nigérian</h6>
+                <p class="text-white/60 text-sm">Le film "The Return" devient le plus gros succès commercial de l'histoire du cinéma nigérian...</p>
+                <div class="article-footer">
+                  <span class="article-author"><i class="bi bi-person"></i> Kofi Mensah</span>
+                  <a href="#" class="article-link">Lire <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 2 -->
+          <div class="col-article" data-animate="fade-up" data-stagger="80" data-parent-index="1">
+            <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300 position-relative">
+              <span class="article-badge interview">Interview</span>
+              <div class="article-image">
+                <img src="assets/images/ceb1.jpg" alt="Article" loading="lazy" decoding="async">
+              </div>
+              <div class="article-content">
+                <span class="article-date"><i class="bi bi-calendar"></i> 18 Nov 2025</span>
+                <h6 class="text-white font-semibold">Entretien exclusif avec le réalisateur Mati Diop</h6>
+                <p class="text-white/60 text-sm">La cinéaste franco-sénégalaise revient sur son dernier projet et sa vision du cinéma africain...</p>
+                <div class="article-footer">
+                  <span class="article-author"><i class="bi bi-person"></i> Fatou Sow</span>
+                  <a href="#" class="article-link">Lire <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 3 -->
+          <div class="col-article" data-animate="fade-up" data-stagger="80" data-parent-index="2">
+            <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300 position-relative">
+              <span class="article-badge critique">Critique</span>
+              <div class="article-image">
+                <img src="assets/images/ceb1.jpg" alt="Article" loading="lazy" decoding="async">
+              </div>
+              <div class="article-content">
+                <span class="article-date"><i class="bi bi-calendar"></i> 17 Nov 2025</span>
+                <h6 class="text-white font-semibold">Critique : "Dahomey" de Mati Diop, un chef-d'ouvre</h6>
+                <p class="text-white/60 text-sm">Notre analyse du documentaire primé à Berlin qui questionne le retour des œuvres d'art africaines...</p>
+                <div class="article-footer">
+                  <span class="article-author"><i class="bi bi-person"></i> Jean-Marc Ela</span>
+                  <a href="#" class="article-link">Lire <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 4 -->
+          <div class="col-article" data-animate="fade-up" data-stagger="80" data-parent-index="3">
+            <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300 position-relative">
+              <span class="article-badge festival">Festival</span>
+              <div class="article-image">
+                <img src="assets/images/ceb1.jpg" alt="Article" loading="lazy" decoding="async">
+              </div>
+              <div class="article-content">
+                <span class="article-date"><i class="bi bi-calendar"></i> 16 Nov 2025</span>
+                <h6 class="text-white font-semibold">Festival de Durban : Le palmarès complet dévoilé</h6>
+                <p class="text-white/60 text-sm">Découvrez tous les lauréats de cette édition qui a mis à l'honneur le cinéma d'Afrique australe...</p>
+                <div class="article-footer">
+                  <span class="article-author"><i class="bi bi-person"></i> Thabo Mbeki</span>
+                  <a href="#" class="article-link">Lire <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 5 -->
+          <div class="col-article" data-animate="fade-up" data-stagger="80" data-parent-index="4">
+            <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300 position-relative">
+              <span class="article-badge sortie">Sortie</span>
+              <div class="article-image">
+                <img src="assets/images/ceb1.jpg" alt="Article" loading="lazy" decoding="async">
+              </div>
+              <div class="article-content">
+                <span class="article-date"><i class="bi bi-calendar"></i> 15 Nov 2025</span>
+                <h6 class="text-white font-semibold">Calendrier : Les sorties cinéma de décembre 2025</h6>
+                <p class="text-white/60 text-sm">Retrouvez tous les films africains qui arriveront sur vos écrans le mois prochain...</p>
+                <div class="article-footer">
+                  <span class="article-author"><i class="bi bi-person"></i> Ama Ata</span>
+                  <a href="#" class="article-link">Lire <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 6 -->
+          <div class="col-article" data-animate="fade-up" data-stagger="80" data-parent-index="5">
+            <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300 position-relative">
+              <span class="article-badge coulisses">Coulisses</span>
+              <div class="article-image">
+                <img src="assets/images/ceb1.jpg" alt="Article" loading="lazy" decoding="async">
+              </div>
+              <div class="article-content">
+                <span class="article-date"><i class="bi bi-calendar"></i> 14 Nov 2025</span>
+                <h6 class="text-white font-semibold">Dans les coulisses du tournage de "Roots Reborn"</h6>
+                <p class="text-white/60 text-sm">Nous avons suivi l'équipe de ce blockbuster panafricain pendant trois semaines au Ghana...</p>
+                <div class="article-footer">
+                  <span class="article-author"><i class="bi bi-person"></i> Kwame Asante</span>
+                  <a href="#" class="article-link">Lire <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 7 -->
+          <div class="col-article" data-animate="fade-up" data-stagger="80" data-parent-index="6">
+            <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300 position-relative">
+              <span class="article-badge news">News</span>
+              <div class="article-image">
+                <img src="assets/images/ceb1.jpg" alt="Article" loading="lazy" decoding="async">
+              </div>
+              <div class="article-content">
+                <span class="article-date"><i class="bi bi-calendar"></i> 13 Nov 2025</span>
+                <h6 class="text-white font-semibold">Amazon Prime Video annonce 10 nouvelles productions africaines</h6>
+                <p class="text-white/60 text-sm">Le géant du streaming dévoile un plan ambitieux pour le marché africain avec des investissements records...</p>
+                <div class="article-footer">
+                  <span class="article-author"><i class="bi bi-person"></i> Ngozi Okonjo</span>
+                  <a href="#" class="article-link">Lire <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 8 -->
+          <div class="col-article" data-animate="fade-up" data-stagger="80" data-parent-index="7">
+            <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300 position-relative">
+              <span class="article-badge portrait">Portrait</span>
+              <div class="article-image">
+                <img src="assets/images/ceb1.jpg" alt="Article" loading="lazy" decoding="async">
+              </div>
+              <div class="article-content">
+                <span class="article-date"><i class="bi bi-calendar"></i> 12 Nov 2025</span>
+                <h6 class="text-white font-semibold">Portrait : Oumar Sy, l'acteur qui conquiert Hollywood</h6>
+                <p class="text-white/60 text-sm">Retour sur le parcours exceptionnel de l'acteur sénégalo-français devenu star internationale...</p>
+                <div class="article-footer">
+                  <span class="article-author"><i class="bi bi-person"></i> Marie Ndiaye</span>
+                  <a href="#" class="article-link">Lire <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 9 -->
+          <div class="col-article" data-animate="fade-up" data-stagger="80" data-parent-index="8">
+            <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300 position-relative">
+              <span class="article-badge boxoffice">Box-office</span>
+              <div class="article-image">
+                <img src="assets/images/ceb1.jpg" alt="Article" loading="lazy" decoding="async">
+              </div>
+              <div class="article-content">
+                <span class="article-date"><i class="bi bi-calendar"></i> 11 Nov 2025</span>
+                <h6 class="text-white font-semibold">Box-office : Les chiffres de la semaine en Afrique</h6>
+                <p class="text-white/60 text-sm">Analyse des performances des films africains sur le continent cette semaine...</p>
+                <div class="article-footer">
+                  <span class="article-author"><i class="bi bi-person"></i> Yemi Osinbajo</span>
+                  <a href="#" class="article-link">Lire <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 10 -->
+          <div class="col-article" data-animate="fade-up" data-stagger="80" data-parent-index="9">
+            <div class="bg-white/5 border border-white/10 rounded-xl hover:border-primary/30 transition-all duration-300 position-relative">
+              <span class="article-badge interview">Interview</span>
+              <div class="article-image">
+                <img src="assets/images/ceb1.jpg" alt="Article" loading="lazy" decoding="async">
+              </div>
+              <div class="article-content">
+                <span class="article-date"><i class="bi bi-calendar"></i> 10 Nov 2025</span>
+                <h6 class="text-white font-semibold">Rencontre avec la nouvelle génération de réalisateurs kényans</h6>
+                <p class="text-white/60 text-sm">Ces jeunes cinéastes qui révolutionnent l'industrie cinématographique est-africaine...</p>
+                <div class="article-footer">
+                  <span class="article-author"><i class="bi bi-person"></i> Wanjiku Karanja</span>
+                  <a href="#" class="article-link">Lire <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination-container">
+          <nav aria-label="Navigation des articles">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+
+</main>
+<footer class="footer text-light pt-5 pb-4" style="background-color: #000;">
+  <div class="container">
+
+    <!-- PARTENAIRES + NEWSLETTER -->
+    <div class="d-flex flex-wrap justify-content-between align-items-start mb-4">
+      
+      <!-- PARTENAIRES -->
+      <div class="partenaires-section">
+        <h5 class="fw-bold mb-3" data-key="footer_partenaires">Partenaires</h5>
+        <div class="d-flex flex-wrap align-items-center gap-4" id="footerPartners"><!-- Chargé dynamiquement via API --></div>
+        <div class="footer-stats mt-3 text-secondary small" id="footerStats"></div>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="newsletter-section text-end">
+        <h5 class="fw-bold mb-3" data-key="footer_newsletter">Newsletter</h5>
+        <form class="d-flex" role="form">
+          <input type="email" class="form-control me-2 bg-dark text-light border-secondary" placeholder="Votre email">
+          <button class="btn btn-danger px-3" data-key="footer_sabonner">S'abonner</button>
+        </form>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary opacity-50">
+
+    <!-- LIENS -->
+    <div class="row text-secondary">
+
+      <!-- À propos -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">À propos</h6>
+        <ul class="list-unstyled small">
+          <li><a href="about.html" class="footer-link" data-key="footer_qui_sommes_nous">Qui sommes-nous</a></li>
+          <li><a href="partenaires.html" class="footer-link">Partenaires</a></li>
+          <li><a href="contact.html" class="footer-link">Publicité</a></li>
+          <li><a href="faq.html" class="footer-link">FAQ</a></li>
+          <li><a href="contact.html" class="footer-link" data-key="footer_contact">Contact</a></li>
+          <li><a href="selections.html" class="footer-link" data-key="menu_selections">Sélections</a></li>
+          <li><a href="festivals.html" class="footer-link" data-key="menu_festivals">Festivals</a></li>
+          <li><a href="login.html" class="footer-link">Connexion</a></li>
+        </ul>
+      </div>
+
+      <!-- Films -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Films</h6>
+        <ul class="list-unstyled small">
+          <li><a href="films.html?sort=recent" class="footer-link">Nouveautés</a></li>
+          <li><a href="films.html" class="footer-link">À l'Affiche</a></li>
+          <li><a href="films.html?filter=upcoming" class="footer-link">À venir</a></li>
+          <li><a href="films.html" class="footer-link">Par pays</a></li>
+          <li><a href="films.html" class="footer-link">Par langue</a></li>
+          <li><a href="films.html?sort=rating" class="footer-link">Box-office</a></li>
+          <li><a href="films.html" class="footer-link">Courts-métrages</a></li>
+          <li><a href="films.html?filter=classics" class="footer-link">Classiques africains</a></li>
+          <li><a href="films.html" class="footer-link">Tous les films</a></li>
+          <li><a href="films.html" class="footer-link">Ajouter un film</a></li>
+        </ul>
+      </div>
+
+      <!-- Séries -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Séries</h6>
+        <ul class="list-unstyled small">
+          <li><a href="series.html?sort=recent" class="footer-link">Nouveautés</a></li>
+          <li><a href="series.html?filter=ongoing" class="footer-link">En cours</a></li>
+          <li><a href="series.html?filter=upcoming" class="footer-link">À venir</a></li>
+          <li><a href="series.html" class="footer-link">Par pays</a></li>
+          <li><a href="series.html" class="footer-link">Par genre</a></li>
+          <li><a href="series.html" class="footer-link">Webséries & Mini-séries</a></li>
+          <li><a href="series.html?filter=classics" class="footer-link">Séries cultes africaines</a></li>
+          <li><a href="series.html" class="footer-link">Toutes les séries</a></li>
+          <li><a href="series.html" class="footer-link">Ajouter une série</a></li>
+        </ul>
+      </div>
+
+      <!-- Émissions -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Émissions</h6>
+        <ul class="list-unstyled small">
+          <li><a href="emissions.html?category=interview" class="footer-link">Interviews</a></li>
+          <li><a href="emissions.html?category=talkshow" class="footer-link">Talk-shows</a></li>
+          <li><a href="emissions.html?category=chronique" class="footer-link">Chroniques</a></li>
+          <li><a href="emissions.html?category=makingof" class="footer-link">Making-of</a></li>
+          <li><a href="emissions.html?category=podcast" class="footer-link">Podcasts</a></li>
+        </ul>
+      </div>
+
+      <!-- Actualités -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Actualités</h6>
+        <ul class="list-unstyled small">
+          <li><a href="actualites.html?category=News" class="footer-link">News</a></li>
+          <li><a href="actualites.html?category=Interviews" class="footer-link">Interviews</a></li>
+          <li><a href="actualites.html?category=Critiques" class="footer-link">Critiques</a></li>
+          <li><a href="actualites.html?category=Festivals%20%26%20%C3%89v%C3%A9nements" class="footer-link">Festivals & événements</a></li>
+        </ul>
+      </div>
+
+      <!-- Communauté -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-light fw-bold mb-3">Communauté</h6>
+        <ul class="list-unstyled small">
+          <li><a href="communaute.html#casting" class="footer-link">Casting</a></li>
+          <li><a href="communaute.html#projets" class="footer-link">Projets</a></li>
+          <li><a href="communaute.html#concours" class="footer-link">Concours</a></li>
+          <li><a href="communaute.html#rejoindre" class="footer-link">Rejoindre la Communauté</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary opacity-50 mt-4">
+
+    <!-- COPYRIGHT -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-secondary small">
+      <p class="mb-2 mb-md-0" data-key="footer_copyright">© 2026 BlackCiné. Tous droits réservés.</p>
+      <div class="d-flex flex-wrap justify-content-center">
+        <a href="confidentialite.html" class="footer-link me-2">Politique de confidentialité</a> |
+        <a href="mentions-legales.html" class="footer-link mx-2">Mentions légales</a> |
+        <a href="cgu.html" class="footer-link mx-2">CGU</a> |
+        <a href="cgv.html" class="footer-link ms-2">CGV</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="assets/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/sanitize.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/actualites.js"></script>
+<script src="assets/js/footer.js"></script>
+<script src="assets/js/favorites.js"></script>
+<script src="assets/js/sharing.js"></script>
+<script src="assets/js/modern-ui.js"></script>
+<script src="assets/js/page-transitions.js"></script>
+<script src="assets/js/form-animations.js"></script>
+<script src="assets/js/accessibility.js"></script>
+<script src="assets/js/mobile-interactions.js"></script>
+<script src="assets/js/performance.js"></script>
+<script src="assets/js/skeletons.js"></script>
+
+</body>
+</html>

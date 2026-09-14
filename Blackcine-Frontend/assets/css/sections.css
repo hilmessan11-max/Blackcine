@@ -1,0 +1,16 @@
+﻿/* ============================================
+   SECTIONS
+   Section layouts, containers, tabs, carousels,
+   dividers, and section-level UI components.
+   ============================================ */
+
+@import url('modules/sections-headers.css');
+@import url('modules/sections-trailers.css');
+@import url('modules/sections-topfilms.css');
+@import url('modules/sections-ticket.css');
+@import url('modules/sections-selection.css');
+@import url('modules/sections-festivals.css');
+@import url('modules/sections-opportunities.css');
+@import url('modules/sections-heritage.css');
+@import url('modules/sections-partners.css');
+
