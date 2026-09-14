@@ -45,8 +45,8 @@ Extensions nécessaires :
 #### Option A : Cloner depuis Git
 
 ```bash
-git clone https://github.com/Yug-Su/Blackcine_Backend.git
-cd blackcine-backend
+git clone https://github.com/hilmessan11-max/Blackcine.git
+cd Blackcine/Blackcine-Backend
 ```
 
 #### Option B : Télécharger l'archive
@@ -398,7 +398,7 @@ Pour la production, configurez Apache ou Nginx.
 server {
     listen 80;
     server_name blackcine.com www.blackcine.com;
-    root /var/www/blackcine-backend/public;
+    root /var/www/blackcine/Blackcine-Backend/public;
 
     add_header X-Frame-Options "SAMEORIGIN";
     add_header X-Content-Type-Options "nosniff";
@@ -549,7 +549,7 @@ En cas de problème d'installation :
 
 - 📧 Email : dev@blackcine.com
 - 📚 Documentation : https://docs.blackcine.com
-- 🐛 Issues : https://github.com/Yug-Su/Blackcine/issues
+- 🐛 Issues : https://github.com/hilmessan11-max/Blackcine/issues
 
 ---
 

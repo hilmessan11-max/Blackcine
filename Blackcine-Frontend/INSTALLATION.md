@@ -14,7 +14,7 @@ Ce guide explique comment installer et configurer BlackCiné en local.
 ## 1. Cloner le dépôt
 
 ```bash
-git clone https://github.com/Yug-Su/Blackcine.git
+git clone https://github.com/hilmessan11-max/Blackcine.git
 cd Blackcine
 ```
 
@@ -180,4 +180,4 @@ npx prettier --write "assets/js/*.js"  # Formater JS
 ## Support
 
 En cas de problème, ouvrez une issue sur GitHub :
-https://github.com/Yug-Su/Blackcine/issues
+https://github.com/hilmessan11-max/Blackcine/issues

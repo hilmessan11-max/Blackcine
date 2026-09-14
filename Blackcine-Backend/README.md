@@ -35,8 +35,8 @@
 
 ```bash
 # 1. Cloner le projet
-git clone https://github.com/Yug-Su/Blackcine_Backend.git
-cd blackcine-backend
+git clone https://github.com/hilmessan11-max/Blackcine.git
+cd Blackcine/Blackcine-Backend
 
 # 2. Installer les dépendances PHP
 composer install

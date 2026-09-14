@@ -18,8 +18,8 @@ Ce guide explique comment déployer BlackCiné en production.
 
 ```bash
 cd /var/www
-git clone https://github.com/Yug-Su/Blackcine_Backend.git blackcine-api
-cd blackcine-api
+git clone https://github.com/hilmessan11-max/Blackcine.git blackcine
+cd blackcine/Blackcine-Backend
 
 composer install --optimize-autoloader --no-dev
 ```
@@ -42,6 +42,8 @@ APP_DEBUG=false
 APP_URL=https://api.blackcine.com
 
 FRONTEND_URL=https://blackcine.com
+FRONTEND_URL_ALT=https://www.blackcine.com
+SANCTUM_STATEFUL_DOMAINS=blackcine.com,www.blackcine.com
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -50,9 +52,21 @@ DB_DATABASE=blackcine
 DB_USERNAME=blackcine_user
 DB_PASSWORD=VotreMotDePasseSecurise
 
+# Sessions sécurisées en HTTPS
 SESSION_DRIVER=database
-CACHE_STORE=database
+SESSION_SECURE_COOKIE=true
+SESSION_DOMAIN=.blackcine.com
+
+# Cache : redis recommandé (supporte les tags du cache home),
+# database fonctionne aussi (fallback sans tags, cf. HomeController)
+CACHE_STORE=redis
+REDIS_HOST=127.0.0.1
 QUEUE_CONNECTION=database
+
+# TMDB — UNIQUEMENT côté serveur (jamais exposé au frontend,
+# le proxy /api/v1/tmdb signe les appels)
+TMDB_BEARER_TOKEN=votre_token_tmdb
+# TMDB_API_KEY=alternative_si_pas_de_bearer
 
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.gmail.com
@@ -66,7 +80,15 @@ MAIL_ENCRYPTION=tls
 
 ```bash
 php artisan migrate --force
+# La migration 2026_09_13_000002 crée les index FULLTEXT MySQL
+# (titles, articles) + index simples — ignorée sur SQLite.
 php artisan db:seed --force
+# Indispensable : seeders des rôles/permissions (Spatie RBAC).
+# Relancer uniquement RolesAndPermissionsSeeder si déjà seedé :
+# php artisan db:seed --class=RolesAndPermissionsSeeder --force
+
+# Lien storage (posters, avatars, logos via asset('storage/...'))
+php artisan storage:link
 ```
 
 ### 1.5. Cache
@@ -87,20 +109,24 @@ chmod -R 775 storage bootstrap/cache
 
 ## 2. Déploiement Frontend
 
-### 2.1. Cloner
+Le frontend est dans le même repo (`Blackcine-Frontend/`), déjà cloné à l'étape 1.
+
+### 2.1. Optimiser
 
 ```bash
-cd /var/www
-git clone https://github.com/Yug-Su/Blackcine_Frontend.git blackcine
-cd blackcine
-```
-
-### 2.2. Optimiser
-
-```bash
+cd /var/www/blackcine/Blackcine-Frontend
 npm install
 npm run optimize
 ```
+
+> ⚠️ `npm run build` **régénère** `assets/css/tailwind.css` (fichier généré,
+> non versionné) depuis `assets/css/input.css`. Les surcharges custom
+> (DaisyUI, animations, scroll, utilitaires) vivent dans
+> `assets/css/modules/tailwind-*.css` : après un rebuild, vérifier que
+> le CSS généré les inclut toujours, sinon ré-appliquer.
+> Les autres CSS (`responsive`, `design-system`, `sections`, …) sont des
+> manifestes `@import` vers `assets/css/modules/` — ne pas les remplacer
+> par des builds.
 
 ## 3. Configuration Nginx
 
@@ -115,7 +141,7 @@ server {
     listen 443 ssl http2;
     server_name blackcine.com;
 
-    root /var/www/blackcine;
+    root /var/www/blackcine/Blackcine-Frontend;
     index index.html;
 
     # SSL
@@ -133,10 +159,12 @@ server {
         add_header Cache-Control "public, immutable";
     }
 
-    # Sécurité
+    # Sécurité (identique à nginx.conf du repo)
     add_header X-Content-Type-Options "nosniff" always;
     add_header X-Frame-Options "SAMEORIGIN" always;
     add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Permissions-Policy "geolocation=(), microphone=(), camera=()" always;
 
     # Gzip
     gzip on;
@@ -152,7 +180,7 @@ server {
     listen 443 ssl http2;
     server_name api.blackcine.com;
 
-    root /var/www/blackcine-api/public;
+    root /var/www/blackcine/Blackcine-Backend/public;
     index index.php;
 
     # SSL
@@ -195,7 +223,7 @@ After=network.target
 
 [Service]
 User=www-data
-WorkingDirectory=/var/www/blackcine-api
+WorkingDirectory=/var/www/blackcine/Blackcine-Backend
 ExecStart=/usr/bin/php artisan queue:work --sleep=3 --tries=3
 Restart=always
 
@@ -212,7 +240,7 @@ sudo systemctl start blackcine-worker
 
 ```bash
 # Vérifier les logs
-tail -f /var/www/blackcine-api/storage/logs/laravel.log
+tail -f /var/www/blackcine/Blackcine-Backend/storage/logs/laravel.log
 
 # Vérifier les queues
 php artisan queue:failed
@@ -221,20 +249,34 @@ php artisan queue:failed
 php artisan queue:retry all
 ```
 
+## 6b. Smoke tests post-déploiement
+
+```bash
+API=https://api.blackcine.com/api/v1
+curl -sf $API/home | head -c 200; echo
+curl -sf $API/footer | head -c 200; echo
+curl -sf "$API/search?q=film&type=films" | head -c 200; echo
+curl -sf $API/tmdb/image-config; echo
+# Proxy TMDB : 403 attendu hors whitelist, jamais de clé exposée
+curl -s -o /dev/null -w "%{http_code}\n" $API/tmdb/account/123
+```
+
 ## 7. Mises à jour
 
 ```bash
-# Backend
-cd /var/www/blackcine-api
+# Un seul repo (monorepo)
+cd /var/www/blackcine
 git pull
+
+# Backend
+cd Blackcine-Backend
 composer install --optimize-autoloader --no-dev
 php artisan migrate --force
 php artisan config:cache
 php artisan route:cache
 
-# Frontend
-cd /var/www/blackcine
-git pull
+# Frontend (voir avertissement tailwind §2.1)
+cd ../Blackcine-Frontend
 npm run optimize
 
 # Redémarrer les services
@@ -248,17 +290,20 @@ sudo systemctl restart blackcine-worker
 # Base de données
 mysqldump -u blackcine_user -p blackcine | gzip > backup_$(date +%Y%m%d).sql.gz
 
-# Fichiers
-tar -czf backup_$(date +%Y%m%d).tar.gz /var/www/blackcine-api/storage /var/www/blackcine/assets/images
+# Fichiers (storage backend + images frontend)
+tar -czf backup_$(date +%Y%m%d).tar.gz /var/www/blackcine/Blackcine-Backend/storage /var/www/blackcine/Blackcine-Frontend/assets/images
 ```
 
 ## 9. Sécurité
 
-- [ ] APP_DEBUG=false
-- [ ] HTTPS forcé
-- [ ] CORS configuré
-- [ ] Rate limiting activé
-- [ ] Headers de sécurité
+- [ ] `APP_DEBUG=false` et `APP_KEY` générée (`php artisan key:generate`)
+- [ ] HTTPS forcé + `SESSION_SECURE_COOKIE=true`
+- [ ] CORS restreint à `FRONTEND_URL` (+ `SANCTUM_STATEFUL_DOMAINS`)
+- [ ] Rate limiting activé (`api`, `auth`, `newsletter`, `tmdb`)
+- [ ] Proxy TMDB : clé/bearer uniquement côté serveur, whitelist d'endpoints
+- [ ] Recherche : `limit max:50`, LIKE échappés (`whereLike` + `ESCAPE`)
+- [ ] Headers de sécurité (cf. §3, identiques à `nginx.conf`)
+- [ ] `.env` jamais commité, `storage/` permissions `www-data`
 - [ ] Sauvegardes automatiques
 - [ ] Logs monitoring
 

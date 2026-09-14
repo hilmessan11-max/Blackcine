@@ -44,7 +44,7 @@ Blackcine/
 
 ```bash
 # 1. Cloner le dépôt
-git clone https://github.com/Yug-Su/Blackcine.git
+git clone https://github.com/hilmessan11-max/Blackcine.git
 cd Blackcine
 
 # 2. Backend
